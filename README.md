@@ -27,3 +27,14 @@ Do you want to see the preview page? run:
 ```bash
 pnpm run preview
 ```
+
+## Commit Your Code 💻
+
+When you want to commit, use:
+
+```bash
+pnpm commit
+
+```
+
+It will help you git add and format, lint and build your code, if it meets problems, commit will stop.

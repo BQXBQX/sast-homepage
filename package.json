@@ -11,7 +11,7 @@
     "preview": "serve out",
     "commit": "git add .&&pnpm lint-staged -p false && pnpm cz",
     "format": "prettier . --write",
-    "eslint": "eslint"
+    "eslint": "eslint ."
   },
   "dependencies": {
     "next": "14.2.3",
