@@ -7,7 +7,7 @@ export default function Home() {
     <main className={styles.main}>
       <div className={styles.description}>
         <p>
-          Get started by editing&nbsp;
+          Get started by edidsjakldjlik你好ting&nbsp;
           <code className={styles.code}>app/page.tsx</code>
         </p>
         <div>
@@ -72,7 +72,7 @@ export default function Home() {
           rel="noopener noreferrer"
         >
           <h2>
-            Templates <span>-&gt;</span>
+            TemplatesA你们好 <span>-&gt;</span>
           </h2>
           <p>Explore starter templates for Next.js.</p>
         </a>

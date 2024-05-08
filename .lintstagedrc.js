@@ -6,5 +6,5 @@ export default {
     "pnpm run lint",
     "npx next build",
   ],
-  "*/**/*.{css,md}": () => ["prettier . --write"],
+  "*/**/*.{css,scss,md}": () => ["prettier . --write"],
 };
