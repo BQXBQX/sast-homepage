@@ -1,0 +1,13 @@
+.header-link-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  gap: 2.4rem;
+  @media screen and (max-width: 900px) {
+    display: none;
+  }
+  .header-link-item {
+    font-size: 14px;
+    cursor: pointer;
+  }
+}
