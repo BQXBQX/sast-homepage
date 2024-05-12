@@ -1,0 +1,37 @@
+.user-options-wrapper {
+  .user-svg-wrapper {
+    height: 28px;
+    width: 28px;
+    border: 2px solid var(--black-color);
+    display: flex;
+    align-items: center;
+    // justify-content: center;
+    border-radius: 15px;
+    box-sizing: border-box;
+    transition: all 0.8s var(--cubic-bezier);
+    position: relative;
+    cursor: pointer;
+    padding: 2px;
+    flex-direction: row-reverse;
+    box-sizing: border-box;
+    overflow: hidden;
+
+    &::before {
+      content: "Login with SAST Link";
+      transition: opacity 1s var(--cubic-bezier);
+      position: absolute;
+      right: 48px;
+      white-space: nowrap;
+      opacity: 0;
+      width: 170px;
+    }
+    &:hover::before {
+      opacity: 1;
+    }
+    &:hover {
+      @media screen and (min-width: 500px) {
+        width: 235px;
+      }
+    }
+  }
+}
