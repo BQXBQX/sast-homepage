@@ -5,6 +5,11 @@
   gap: 0.5em;
   height: 100%;
   position: relative;
+  flex-grow: 1;
+  h1,
+  p {
+    white-space: wrap;
+  }
   .sheet-glf {
     position: absolute;
     bottom: 0;

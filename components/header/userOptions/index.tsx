@@ -13,6 +13,10 @@ const UserOptions = () => {
       >
         <UnoptimizedImage src={UserPic} alt="user" width={20} />
       </div>
+      <div>
+        <div></div>
+        <div></div>
+      </div>
     </div>
   );
 };

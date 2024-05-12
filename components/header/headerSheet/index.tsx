@@ -11,10 +11,6 @@ interface HeaderSheetProps {
 const HeaderSheet: React.FC<HeaderSheetProps> = ({ visible }) => {
   const [selectItem, setSelectItem] = useState<number>();
 
-  const item = {
-    hidden: { opacity: 0, y: -5, transition: { duration: 2 } },
-    show: { opacity: 1, transition: { duration: 2 } },
-  };
   const variants = {
     visible: (i: number) => ({
       opacity: 1,
@@ -33,9 +29,9 @@ const HeaderSheet: React.FC<HeaderSheetProps> = ({ visible }) => {
   }, [visible]);
 
   return (
-    <AnimatePresence>
-      {visible && (
-        <motion.div className={styles["header-sheet-wrapper"]} variants={item}>
+    <div className={styles["header-sheet-wrapper"]}>
+      <AnimatePresence>
+        {visible && (
           <div className={styles["header-sheet-text-wrapper"]}>
             <motion.span
               className={`${NotoSansSC.className} ${styles["header-sheet-title"]}`}
@@ -64,10 +60,14 @@ const HeaderSheet: React.FC<HeaderSheetProps> = ({ visible }) => {
               );
             })}
           </div>
-          <HeaderSheetContent selectItem={selectItem} />
-        </motion.div>
-      )}
-    </AnimatePresence>
+        )}
+        <HeaderSheetContent
+          selectItem={selectItem}
+          key="headerSheet"
+          visible={visible}
+        />
+      </AnimatePresence>
+    </div>
   );
 };
 

@@ -33,30 +33,31 @@ const sheetContentItems = [
 
 interface HeaderSheetContentProps {
   selectItem?: number;
+  visible?: boolean;
 }
 
 const HeaderSheetContent: React.FC<HeaderSheetContentProps> = ({
   selectItem,
+  visible,
 }) => {
-  const item = {
+  const sheetContentAnimation = {
     hidden: { opacity: 0, y: -5, transition: { duration: 0.2 } },
     show: { opacity: 1, y: 5, transition: { duration: 0.2 } },
   };
   return (
     <>
-      {selectItem !== undefined && (
+      {selectItem !== undefined && visible && (
         <motion.div
           key={sheetContentItems[selectItem].h1}
           className={`${NotoSansSC.className} ${styles["sheet-content-wrapper"]}`}
-          variants={item}
+          variants={sheetContentAnimation}
           initial="hidden"
           animate="show"
-          exit="hidden"
         >
           <UnoptimizedImage
             src={sheetContentItems[selectItem].svg}
             alt="HeaderSheet1Pic"
-            width={50}
+            width={40}
           />
           <h1>{sheetContentItems[selectItem].h1}</h1>
           <p>{sheetContentItems[selectItem].p}</p>
@@ -65,7 +66,8 @@ const HeaderSheetContent: React.FC<HeaderSheetContentProps> = ({
             alt="HeaderSheet1Gif"
             width={300}
             className={styles["sheet-glf"]}
-          ></UnoptimizedImage>
+            priority
+          />
         </motion.div>
       )}
     </>
