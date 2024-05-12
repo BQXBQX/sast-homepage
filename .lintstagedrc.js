@@ -5,6 +5,7 @@ export default {
     "eslint .",
     "pnpm run lint",
     "npx next build",
+    "git add .",
   ],
   "*/**/*.{css,scss,md}": () => ["prettier . --write"],
 };
