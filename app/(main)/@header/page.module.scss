@@ -1,0 +1,28 @@
+.header-wrapper {
+  width: 100%;
+  height: 56px;
+  padding: 0 calc((100% - 1100px) / 2);
+  background-color: rgba(250, 250, 252, 0.8) !important;
+  backdrop-filter: saturate(180%) blur(20px);
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  z-index: 2;
+  .header-content {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    height: 56px;
+    gap: 5rem;
+    padding: 1rem;
+    justify-content: space-between;
+  }
+}
+
+.header-sheet-background {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  z-index: 1;
+}
