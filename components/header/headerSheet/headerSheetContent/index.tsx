@@ -23,7 +23,7 @@ const sheetContentItems = [
     h1: "互联网管理思维",
     p: "科协的建设和形象与管理类部门密不可分。在科协，管理类部门承载着三十届以来科协建设的点点滴滴。自由、开放、交流，这是贯穿在科协人骨子里的特质。在科协，我们剔除掉形式主义，归繁杂琐事于至简至善。高质高效，是我们最终期待的目的。",
     glf: HeaderSheet2Gif,
-    size: 35,
+    size: 38,
   },
   {
     svg: HeaderSheet3Pic,
@@ -41,21 +41,21 @@ interface HeaderSheetContentProps {
 
 const HeaderSheetContent: React.FC<HeaderSheetContentProps> = ({
   selectItem,
-  visible,
 }) => {
   const sheetContentAnimation = {
     hidden: { opacity: 0, y: -5, transition: { duration: 0.2 } },
-    show: { opacity: 1, y: 5, transition: { duration: 0.2 } },
+    show: { opacity: 1, y: 5, transition: { duration: 0.3 } },
   };
   return (
     <>
-      {selectItem !== undefined && visible && (
+      {selectItem !== undefined && (
         <motion.div
           key={sheetContentItems[selectItem].h1}
           className={`${NotoSansSC.className} ${styles["sheet-content-wrapper"]}`}
           variants={sheetContentAnimation}
           initial="hidden"
           animate="show"
+          exit="hidden"
         >
           <UnoptimizedImage
             src={sheetContentItems[selectItem].svg}
