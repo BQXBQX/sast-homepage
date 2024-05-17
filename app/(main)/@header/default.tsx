@@ -10,6 +10,18 @@ import { AnimatePresence, motion } from "framer-motion";
 
 const Header = () => {
   const [visible, setVisible] = useState<boolean>();
+
+  const headerSheetBackAnimation = {
+    hidden: {
+      backdropFilter: "saturate(180%) blur(0px)",
+      backgroundColor: "rgba(128, 128, 128, 0)",
+    },
+    show: {
+      backgroundColor: "rgba(128, 128, 128, 0.4)",
+      backdropFilter: "saturate(180%) blur(20px)",
+    },
+  };
+
   return (
     <>
       <motion.nav
@@ -22,7 +34,8 @@ const Header = () => {
             : "drop-shadow(0 0px 0px #ffffff)",
         }}
         transition={{
-          duration: 0.6,
+          duration: 0.4,
+          delay: 0.16,
         }}
       >
         <div className={styles["header-content"]}>
@@ -40,18 +53,10 @@ const Header = () => {
           <motion.div
             className={styles["header-sheet-background"]}
             onMouseEnter={() => setVisible(false)}
-            animate={{
-              backgroundColor: "rgba(128, 128, 128, 0.4)",
-              backdropFilter: "saturate(180%) blur(20px)",
-            }}
-            initial={{
-              backdropFilter: "saturate(180%) blur(0px)",
-              backgroundColor: "rgba(128, 128, 128, 0)",
-            }}
-            exit={{
-              backdropFilter: "saturate(180%) blur(0px)",
-              backgroundColor: "rgba(128, 128, 128, 0)",
-            }}
+            variants={headerSheetBackAnimation}
+            animate="show"
+            initial="hidden"
+            exit="hidden"
             transition={{
               duration: 0.2,
             }}
