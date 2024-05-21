@@ -1,12 +1,17 @@
 "use client";
 import React, { useState } from "react";
-import styles from "./page.module.scss";
-import sastPic from "@/public/img/sast_logo_black.png";
-import UnoptimizedImage from "@/components/unoptimizedImage";
-import HeaderLink from "@/components/header/headerLink";
-import UserOptions from "@/components/header/userOptions";
-import HeaderSheet from "@/components/header/headerSheet";
+
 import { AnimatePresence, motion } from "framer-motion";
+
+import sastPic from "@/public/img/sast_logo_black.png";
+import {
+  UnoptimizedImage,
+  HeaderLink,
+  UserOptions,
+  HeaderSheet,
+} from "@/components";
+
+import styles from "./page.module.scss";
 
 const Header = () => {
   const [visible, setVisible] = useState<boolean>();
@@ -39,7 +44,7 @@ const Header = () => {
         }}
       >
         <div className={styles["header-content"]}>
-          <UnoptimizedImage src={sastPic} alt="sast" height={30} priority />
+          <UnoptimizedImage src={sastPic} alt="sast" height={35} priority />
           <HeaderLink
             openSheet={() => setVisible(true)}
             closeSheet={() => setVisible(false)}

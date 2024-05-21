@@ -1,7 +1,8 @@
 import React from "react";
-import UnoptimizedImage from "@/components/unoptimizedImage";
-import styles from "./index.module.scss";
+
 import { motion } from "framer-motion";
+
+// import { UnoptimizedImage } from "@/components";
 import HeaderSheet1Pic from "@/public/img/headerSheet1.svg";
 import HeaderSheet2Pic from "@/public/img/headerSheet2.svg";
 import HeaderSheet3Pic from "@/public/img/headerSheet3.svg";
@@ -9,6 +10,9 @@ import HeaderSheet1Gif from "@/public/img/1.gif";
 import HeaderSheet2Gif from "@/public/img/2.gif";
 import HeaderSheet3Gif from "@/public/img/3.gif";
 import { NotoSansSC } from "@/styles/fonts";
+
+import styles from "./index.module.scss";
+import { UnoptimizedImage } from "../../../unoptimizedImage";
 
 const sheetContentItems = [
   {
@@ -39,12 +43,12 @@ interface HeaderSheetContentProps {
   visible?: boolean;
 }
 
-const HeaderSheetContent: React.FC<HeaderSheetContentProps> = ({
+export const HeaderSheetContent: React.FC<HeaderSheetContentProps> = ({
   selectItem,
 }) => {
   const sheetContentAnimation = {
     hidden: { opacity: 0, y: -5, transition: { duration: 0.2 } },
-    show: { opacity: 1, y: 5, transition: { duration: 0.3 } },
+    show: { opacity: 1, y: 5, transition: { duration: 0.3, delay: 0.05 } },
   };
   return (
     <>
@@ -76,5 +80,3 @@ const HeaderSheetContent: React.FC<HeaderSheetContentProps> = ({
     </>
   );
 };
-
-export default HeaderSheetContent;

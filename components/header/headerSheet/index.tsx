@@ -1,14 +1,18 @@
+"use client";
 import React, { useEffect, useState } from "react";
-import styles from "./index.module.scss";
+
 import { AnimatePresence, motion } from "framer-motion";
-import { NotoSansSC } from "@/styles/fonts";
-import HeaderSheetContent from "./headerSheetContent";
+
+import { NotoSansSC, NotoSansSCBold } from "@/styles/fonts";
+
+import { HeaderSheetContent } from "./headerSheetContent";
+import styles from "./index.module.scss";
 
 interface HeaderSheetProps {
   visible?: boolean;
 }
 
-const HeaderSheet: React.FC<HeaderSheetProps> = ({ visible }) => {
+export const HeaderSheet: React.FC<HeaderSheetProps> = ({ visible }) => {
   const [selectItem, setSelectItem] = useState<number>();
 
   const item = {
@@ -50,7 +54,7 @@ const HeaderSheet: React.FC<HeaderSheetProps> = ({ visible }) => {
             {sheetItems.map((item, i) => {
               return (
                 <motion.h1
-                  className={`${NotoSansSC.className} ${styles["header-sheet-item"]}`}
+                  className={`${NotoSansSCBold.className} ${styles["header-sheet-item"]}`}
                   variants={variants}
                   animate="visible"
                   initial="hidden"
@@ -70,5 +74,3 @@ const HeaderSheet: React.FC<HeaderSheetProps> = ({ visible }) => {
     </AnimatePresence>
   );
 };
-
-export default HeaderSheet;

@@ -7,3 +7,7 @@ export const JetBrainsMono = localFont({
 export const NotoSansSC = localFont({
   src: "../../public/fonts/noto-sans-sc-chinese-simplified-400-normal.woff2",
 });
+
+export const NotoSansSCBold = localFont({
+  src: "../../public/fonts/noto-sans-sc-chinese-simplified-700-normal.woff2",
+});

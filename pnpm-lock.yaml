@@ -20,6 +20,9 @@ dependencies:
   sharp:
     specifier: ^0.33.3
     version: 0.33.3
+  swiper:
+    specifier: ^11.1.3
+    version: 11.1.3
 
 devDependencies:
   "@next/eslint-plugin-next":
@@ -5460,6 +5463,14 @@ packages:
       }
     engines: { node: ">= 0.4" }
     dev: true
+
+  /swiper@11.1.3:
+    resolution:
+      {
+        integrity: sha512-80MSxonyTxrGcaWj9YgvvhD8OG0B9/9IVZP33vhIEvyWvmKjnQDBieO+29wKvMx285sAtvZyrWBdkxaw6+D3aw==,
+      }
+    engines: { node: ">= 4.7.0" }
+    dev: false
 
   /tapable@2.2.1:
     resolution:
