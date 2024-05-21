@@ -1,6 +1,9 @@
 "use client";
+
 import React from "react";
+
 import { NotoSansSC } from "@/styles/fonts";
+
 import styles from "./index.module.scss";
 
 interface HeaderLinkProps {
@@ -8,7 +11,10 @@ interface HeaderLinkProps {
   closeSheet: () => void;
 }
 
-const HeaderLink: React.FC<HeaderLinkProps> = ({ openSheet, closeSheet }) => {
+export const HeaderLink: React.FC<HeaderLinkProps> = ({
+  openSheet,
+  closeSheet,
+}) => {
   const otherLinkHoverHandle = () => {
     closeSheet();
   };
@@ -41,5 +47,3 @@ const HeaderLink: React.FC<HeaderLinkProps> = ({ openSheet, closeSheet }) => {
     </div>
   );
 };
-
-export default HeaderLink;

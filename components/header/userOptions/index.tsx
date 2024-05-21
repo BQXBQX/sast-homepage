@@ -1,10 +1,12 @@
 import React from "react";
-import UnoptimizedImage from "@/components/unoptimizedImage";
+
 import UserPic from "@/public/img/user.svg";
-import styles from "./index.module.scss";
 import { JetBrainsMono } from "@/styles/fonts";
 
-const UserOptions = () => {
+import { UnoptimizedImage } from "../../unoptimizedImage";
+import styles from "./index.module.scss";
+
+export const UserOptions = () => {
   return (
     <div className={styles["user-options-wrapper"]}>
       {/* <span>Login with SAST Link</span> */}
@@ -20,5 +22,3 @@ const UserOptions = () => {
     </div>
   );
 };
-
-export default UserOptions;
