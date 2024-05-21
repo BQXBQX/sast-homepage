@@ -30,7 +30,6 @@ export const First = () => {
           </SwiperSlide>
         </Swiper>
       </div>
-      {/* <Pagination></Pagination> */}
     </>
   );
 };
