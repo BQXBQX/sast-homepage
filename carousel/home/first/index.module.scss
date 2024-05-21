@@ -1,9 +1,9 @@
 .first-container {
-  width: 100%;
+  width: 90%;
   height: 40rem;
   display: flex;
   position: relative;
-  margin-top: 3.5rem;
+  margin-top: 3.8rem;
   overflow: visible;
   box-sizing: border-box;
   @media screen and (max-width: 600px) {
@@ -13,10 +13,12 @@
     width: 100%;
     height: 100%;
     overflow: visible;
+    box-sizing: border-box;
     .swiper-item {
       max-width: var(--max-width) !important;
-      width: 95%;
+      width: 100%;
       height: 100%;
+      box-sizing: border-box;
     }
   }
 }

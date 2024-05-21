@@ -1,6 +1,78 @@
+"use client";
 import React from "react";
-// import styles from "./index.module.scss";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Card } from "@/components";
+import pic1 from "@/public/img/second1.jpg";
+import pic2 from "@/public/img/second2.jpg";
+import pic3 from "@/public/img/second3.jpg";
+import pic4 from "@/public/img/second4.jpg";
+
+import footPrintSvg from "@/public/img/footprint.svg";
+import modalSvg from "@/public/img/medal.svg";
+import cubeSvg from "@/public/img/cube.svg";
+import coreSvg from "@/public/img/core.svg";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+
+import styles from "./index.module.scss";
+import { NotoSansSC } from "@/styles/fonts";
 
 export const Second = () => {
-  return <>{/* <div>始于志同,行于道合</div> */}</>;
+  return (
+    <div className={`${NotoSansSC.className} ${styles["second-container"]}`}>
+      <div className={styles["second-wrapper"]}>
+        <h2>什么是科协：</h2>
+        <div className={styles["card-container"]}>
+          <Swiper
+            slidesPerView={"auto"}
+            spaceBetween={12}
+            pagination={{
+              clickable: true,
+            }}
+            className={styles.swiper}
+          >
+            <SwiperSlide className={styles["swiper-item"]}>
+              <Card
+                title="始于志同,行于道合"
+                desc="在科协，因为共同的兴趣、爱好、追求而结识，志趣相投方愿结伴而行。来这里，开启想象中的大学生活。"
+                backgroundImg={pic1}
+                svg={footPrintSvg}
+              ></Card>
+            </SwiperSlide>
+            <SwiperSlide className={styles["swiper-item"]}>
+              <Card
+                title="文韬武略,样样在行"
+                desc="在科协，“技术”作为引子，管理类创新类部门…在科协这棵繁茂大树下，无论你志在何方，总有伸展方向。"
+                backgroundImg={pic2}
+                svg={modalSvg}
+                svgRightPosition="-16%"
+              ></Card>
+            </SwiperSlide>
+            <SwiperSlide className={styles["swiper-item"]}>
+              <Card
+                title="去繁化简,归于本质"
+                desc="三十余年一如既往，科协人守护着这块净士的纯粹性。去除繁杂的琐事，还原社团属性，不忘初心，归于本质。"
+                backgroundImg={pic3}
+                svg={cubeSvg}
+                svgRightPosition="-6%"
+                svgBottomPosition="-18%"
+              ></Card>
+            </SwiperSlide>
+            <SwiperSlide className={styles["swiper-item"]}>
+              <Card
+                title="文韬武略,样样在行"
+                desc="在科协，“技术”作为引子，管理类创新类部门…在科协这棵繁茂大树下，无论你志在何方，总有伸展方向。"
+                backgroundImg={pic4}
+                svg={coreSvg}
+                svgRightPosition="-6%"
+              ></Card>
+            </SwiperSlide>
+          </Swiper>
+        </div>
+      </div>
+    </div>
+  );
 };
