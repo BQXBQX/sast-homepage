@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./index.module.scss";
 import { JetBrainsMono, NotoSansSCBold } from "@/styles/fonts";
-import { Card } from "@/components";
+import { Button } from "@/components";
 export const WhoWeAreCard = () => {
   return (
     <div className={styles["card-container"]}>
@@ -9,9 +9,9 @@ export const WhoWeAreCard = () => {
         Who we are?
       </h1>
       <h1 className={`${NotoSansSCBold.className} ${styles.desc}`}>我们是谁</h1>
-      <Card className={`${NotoSansSCBold.className} ${styles.button}`}>
+      <Button className={`${NotoSansSCBold.className} ${styles.button}`}>
         点击了解更多 ￫
-      </Card>
+      </Button>
     </div>
   );
 };

@@ -1,0 +1,14 @@
+.button {
+  all: unset;
+  // background-image: url("../../public/img/background.png");
+  background-size: 50%;
+  // background-color: #f9f4e6;
+  // border: 2px solid var(--black-color);
+  width: fit-content;
+  padding: 12px 15px;
+  font-size: 14px;
+  border-radius: 30px;
+  color: black;
+  cursor: pointer;
+  background-color: hsl(0, 0%, 98%);
+}

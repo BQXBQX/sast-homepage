@@ -7,7 +7,7 @@ import styles from "./index.module.scss";
 import { WelcomeCard } from "./welcomeCard";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { WhoWeAreCard } from "./whoWeAreCard";
-import { Pagination } from "@/components";
+// import { Pagination } from "@/components";
 
 export const First = () => {
   return (
@@ -16,7 +16,7 @@ export const First = () => {
         <Swiper
           className={styles["first-swiper"]}
           centeredSlides={true}
-          spaceBetween={0}
+          spaceBetween={12}
           slidesPerView={"auto"}
           parallax={true}
           slideToClickedSlide={true}
@@ -30,7 +30,6 @@ export const First = () => {
           </SwiperSlide>
         </Swiper>
       </div>
-      <Pagination></Pagination>
     </>
   );
 };

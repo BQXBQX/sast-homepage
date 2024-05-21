@@ -32,6 +32,7 @@
   --cubic-bezier: cubic-bezier(0.215, 0.61, 0.355, 1);
   --phone-width: 900px;
   --gray-color: #808080;
+  --max-width-second: 900px;
 }
 
 @font-face {
@@ -91,6 +92,7 @@ html,
 body {
   max-width: 100vw;
   font-family: "JetBrains Mono", "noto sans sc", monospace;
+  color-scheme: light;
 }
 
 body {
