@@ -2,7 +2,9 @@
 import React from "react";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Card } from "@/components";
+import { Mousewheel } from "swiper/modules";
+
+import { CarouselCard } from "@/components";
 import pic1 from "@/public/img/third1.jpg";
 import pic2 from "@/public/img/third2.jpg";
 import pic3 from "@/public/img/third3.jpg";
@@ -24,17 +26,19 @@ export const Third = () => {
     >
       <div className={styles["second-wrapper"]}>
         <h2>数说科协:</h2>
-        <div className={styles["card-container"]}>
+        <div className={styles["CarouselCard-container"]}>
           <Swiper
             slidesPerView={"auto"}
             spaceBetween={12}
             pagination={{
               clickable: true,
             }}
+            mousewheel={true}
+            modules={[Mousewheel]}
             className={styles.swiper}
           >
             <SwiperSlide className={styles["swiper-item"]}>
-              <Card
+              <CarouselCard
                 title={
                   <span
                     className={JetBrainsMono.className}
@@ -45,10 +49,10 @@ export const Third = () => {
                 }
                 desc="南邮校科协创办至今已经走过31个年头，2023年是第32届。"
                 backgroundImg={pic1}
-              ></Card>
+              ></CarouselCard>
             </SwiperSlide>
             <SwiperSlide className={styles["swiper-item"]}>
-              <Card
+              <CarouselCard
                 title={
                   <span
                     className={JetBrainsMono.className}
@@ -59,10 +63,10 @@ export const Third = () => {
                 }
                 desc="校科协在大学生活动中心拥有总计约362平方米的活动室空间。"
                 backgroundImg={pic2}
-              ></Card>
+              ></CarouselCard>
             </SwiperSlide>
             <SwiperSlide className={styles["swiper-item"]}>
-              <Card
+              <CarouselCard
                 title={
                   <span
                     className={JetBrainsMono.className}
@@ -73,10 +77,10 @@ export const Third = () => {
                 }
                 desc="第27届科技节举办47项科创此赛，覆盖理、工、经、管、文、教、艺等各专业。"
                 backgroundImg={pic3}
-              ></Card>
+              ></CarouselCard>
             </SwiperSlide>
             <SwiperSlide className={styles["swiper-item"]}>
-              <Card
+              <CarouselCard
                 title={
                   <span
                     className={JetBrainsMono.className}
@@ -87,10 +91,10 @@ export const Third = () => {
                 }
                 desc="校科协第32届中干及以上成员获得校级以上奖项290项。"
                 backgroundImg={pic4}
-              ></Card>
+              ></CarouselCard>
             </SwiperSlide>
             <SwiperSlide className={styles["swiper-item"]}>
-              <Card
+              <CarouselCard
                 title={
                   <span
                     className={JetBrainsMono.className}
@@ -101,10 +105,10 @@ export const Third = () => {
                 }
                 desc="2020届毕业生中，曾经校科协成员毕业明确去向比例达100%"
                 backgroundImg={pic5}
-              ></Card>
+              ></CarouselCard>
             </SwiperSlide>
             <SwiperSlide className={styles["swiper-item"]}>
-              <Card
+              <CarouselCard
                 title={
                   <span
                     className={JetBrainsMono.className}
@@ -115,7 +119,7 @@ export const Third = () => {
                 }
                 desc="第32届南邮校科协各部门总计559人。"
                 backgroundImg={pic6}
-              ></Card>
+              ></CarouselCard>
             </SwiperSlide>
           </Swiper>
         </div>

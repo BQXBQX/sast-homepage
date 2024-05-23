@@ -3,8 +3,9 @@ import React, { ReactNode } from "react";
 import styles from "./index.module.scss";
 import { UnoptimizedImage } from "../unoptimizedImage";
 import { StaticImageData } from "next/image";
+import { NotoSansSCBold } from "@/styles/fonts";
 
-interface CardProps {
+interface CarouselCardProps {
   title: string | ReactNode;
   desc: string;
   backgroundImg?: StaticImageData;
@@ -13,7 +14,7 @@ interface CardProps {
   svgBottomPosition?: string;
   svgRightPosition?: string;
 }
-export const Card: React.FC<CardProps> = ({
+export const CarouselCard: React.FC<CarouselCardProps> = ({
   title,
   desc,
   backgroundImg,
@@ -39,7 +40,10 @@ export const Card: React.FC<CardProps> = ({
           style={{ bottom: svgBottomPosition, right: svgRightPosition }}
         ></UnoptimizedImage>
       )}
-      <h1 className={styles.title} style={{ color: color }}>
+      <h1
+        className={`${NotoSansSCBold.className} ${styles.title}`}
+        style={{ color: color }}
+      >
         {title}
       </h1>
       <p className={styles.desc} style={{ color: color }}>

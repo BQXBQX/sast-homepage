@@ -37,6 +37,9 @@ const Header = () => {
           filter: visible
             ? "drop-shadow(0 4px 20px #ffffff)"
             : "drop-shadow(0 0px 0px #ffffff)",
+          backgroundColor: visible
+            ? "rgba(250, 250, 252, 0.8)"
+            : "rgba(250, 250, 252, 0.5)",
         }}
         transition={{
           duration: 0.4,

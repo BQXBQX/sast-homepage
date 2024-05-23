@@ -1,0 +1,39 @@
+.show-number-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 100px;
+  .title {
+    padding: 0 100px;
+    font-size: 64px;
+  }
+  .number-container {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    .number-item {
+      height: 350px;
+      padding: 10% 20%;
+      box-sizing: border-box;
+      border: 1px solid var(--divider-color);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      position: relative;
+      ::before {
+        content: ' " ';
+        position: absolute;
+        left: 15%;
+        top: 15%;
+      }
+      h1 {
+        font-size: 80px;
+        text-align: end;
+      }
+      p {
+        margin-top: 10px;
+        color: var(--desc-color);
+      }
+    }
+  }
+}
