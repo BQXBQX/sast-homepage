@@ -1,9 +1,7 @@
 import React from "react";
 import type { Metadata } from "next";
 import "@/styles/globals.css";
-// import { JetBrainsMono, NotoSansSC } from "@/styles/fonts";
-
-// const inter = Inter({ subsets: ["latin"] });
+// import { useFluidTypography } from "@/hooks/useFluidTypography";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -14,6 +12,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  // const rootFontSize = useFluidTypography();
   return (
     <html lang="en">
       <body>{children}</body>

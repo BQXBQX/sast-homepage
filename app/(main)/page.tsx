@@ -5,7 +5,9 @@ import {
   Carousel,
   HeroImage,
   Introduction,
+  JoinUs,
   ShowNumber,
+  // StoryBegin,
   Welcome,
 } from "@/components";
 
@@ -19,6 +21,8 @@ export default function Home() {
       <Introduction></Introduction>
       <ShowNumber></ShowNumber>
       <Carousel></Carousel>
+      <JoinUs></JoinUs>
+      {/* <StoryBegin></StoryBegin> */}
       {/* <First></First> */}
       {/* <Second></Second> */}
     </main>

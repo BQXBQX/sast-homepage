@@ -3,7 +3,6 @@
   background-position: center;
   background-size: cover;
   width: 30rem;
-  border-radius: 5px;
   position: relative;
   overflow: hidden;
   padding: 0.5rem;
@@ -46,9 +45,9 @@
     z-index: 2;
   }
   .title {
-    margin: 5px;
+    margin: 0.4rem;
     z-index: 3;
-    font-size: 40px;
+    font-size: 2rem;
     letter-spacing: 1px;
   }
   .desc {
@@ -56,7 +55,7 @@
     z-index: 3;
     bottom: 0;
     color: var(--white-color);
-    margin: 10px;
+    margin: 0.6rem;
     // font-size: 20px;
   }
 }

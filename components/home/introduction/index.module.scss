@@ -1,22 +1,22 @@
 .introduction-wrapper {
   display: flex;
   flex-direction: row;
-  border: 1px solid var(--divider-color);
+  border: var(--divider-weight) solid var(--divider-color);
   .left-span {
     width: 40%;
-    padding: 100px;
-    font-size: 32px;
+    padding: 6rem;
+    font-size: 2.5rem;
   }
   .right {
     width: 60%;
-    padding: 100px;
-    border-left: 1px solid var(--divider-color);
+    padding: 6rem;
+    border-left: var(--divider-weight) solid var(--divider-color);
     h1 {
-      font-size: 64px;
+      font-size: var(--title-size);
     }
     p {
       margin-top: 1rem;
-      color: #818181;
+      color: var(--desc-color);
     }
   }
 }

@@ -11,3 +11,7 @@ export const NotoSansSC = localFont({
 export const NotoSansSCBold = localFont({
   src: "../../public/fonts/noto-sans-sc-chinese-simplified-700-normal.woff2",
 });
+
+export const sacramento = localFont({
+  src: "../../public/fonts/sacramento-latin-400-normal.woff2",
+});

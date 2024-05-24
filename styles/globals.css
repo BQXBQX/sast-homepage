@@ -34,8 +34,9 @@
   --gray-color: #808080;
   --max-width-second: 900px;
   --divider-color: #d6d6d6;
-
   --desc-color: #818181;
+  --title-size: 4rem;
+  --divider-weight: 2px;
 }
 
 @font-face {
@@ -96,6 +97,19 @@ body {
   max-width: 100vw;
   font-family: "noto sans", "noto sans sc", monospace;
   color-scheme: light;
+  @media screen and (max-width: 1850px) and (min-width: 1600px) {
+    font-size: 14px;
+  }
+  @media screen and (max-width: 1600px) and (min-width: 1380px) {
+    font-size: 12px;
+  }
+  @media screen and (max-width: 1380px) and (min-width: 1000px) {
+    font-size: 10px;
+  }
+  @media screen and (max-width: 1150px) and (min-width: 920px) {
+    font-size: 8px;
+    --divider-weight: 1px;
+  }
 }
 
 body {

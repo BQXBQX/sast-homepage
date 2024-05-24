@@ -10,12 +10,16 @@ export const Welcome = () => {
   return (
     <div className={styles["welcome-wrapper"]}>
       <div className={styles["span-wrapper"]}>
-        <h1 className={styles.title}>SAST 官方 焕然一新</h1>
-        <h2 className={styles.desc}>Igniting the thought.</h2>
+        <h1 className={`${styles.title}`}>SAST 官方 焕然一新</h1>
+        <h2 className={`${styles.desc}`}>Igniting the thought.</h2>
         <Button className={styles.button}>点击了解更多 →</Button>
       </div>
       <div className={styles["img-wrapper"]}>
-        <UnoptimizedImage src={BulbPic} alt="bulb" />
+        <UnoptimizedImage
+          src={BulbPic}
+          alt="bulb"
+          style={{ width: "40%", objectFit: "contain" }}
+        />
       </div>
     </div>
   );
