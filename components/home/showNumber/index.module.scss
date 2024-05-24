@@ -17,7 +17,7 @@
       box-sizing: border-box;
       outline: var(--divider-weight) solid var(--divider-color);
       display: flex;
-      margin: 1px;
+      margin: calc(var(--divider-weight) / 2);
       flex-direction: column;
       justify-content: space-around;
       position: relative;
