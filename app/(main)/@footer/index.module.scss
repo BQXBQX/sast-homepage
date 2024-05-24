@@ -1,22 +1,22 @@
 .footerWrap {
   width: 100%;
   color: var(--black-color);
-  font-size: 14px;
+  font-size: 1rem;
   display: flex;
   flex-direction: column;
-  padding: 100px 120px 40px 120px;
   justify-content: center;
   align-items: center;
+  gap: 3rem;
+  margin-bottom: 3rem;
   .divide {
-    height: 1px;
-    background-color: #d6d6d6;
+    height: var(--divider-weight);
+    background-color: var(--divider-color);
     width: 100%;
-    margin: 50px 0;
     max-width: var(--max-width);
     width: 100%;
   }
   .bottom {
-    margin: 0 10px;
+    padding: 0 6rem;
     max-width: var(--max-width);
     width: 100%;
     display: flex;
@@ -25,25 +25,26 @@
     flex-wrap: wrap;
   }
   .footerBody {
-    margin: 0 10px;
+    margin-top: 6rem;
     width: auto;
     max-width: var(--max-width);
     width: 100%;
     display: flex;
-    gap: 50px;
+    gap: 3rem;
     justify-content: space-between;
+    padding: 0 6rem;
     .footerSection {
       flex: 1 1 auto;
-      max-width: 200px;
+      max-width: 12.5rem;
       .title {
-        font-size: 18px;
+        font-size: 1.2rem;
         font-weight: 600;
-        margin-bottom: 25px;
+        margin-bottom: 1.5rem;
       }
       .content {
         display: flex;
         flex-direction: column;
-        gap: 10px;
+        gap: 0.6rem;
         .link {
           cursor: pointer;
           &:hover {

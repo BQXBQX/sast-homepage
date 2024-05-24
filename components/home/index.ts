@@ -4,4 +4,4 @@ export * from "./introduction";
 export * from "./showNumber";
 export * from "./carousel";
 export * from "./joinUs";
-// export * from "./storyBegin";
+export * from "./projects";

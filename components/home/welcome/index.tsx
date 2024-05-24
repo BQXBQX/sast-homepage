@@ -14,6 +14,7 @@ export const Welcome = () => {
         <h2 className={`${styles.desc}`}>Igniting the thought.</h2>
         <Button className={styles.button}>点击了解更多 →</Button>
       </div>
+      <div className={styles.divider}></div>
       <div className={styles["img-wrapper"]}>
         <UnoptimizedImage
           src={BulbPic}

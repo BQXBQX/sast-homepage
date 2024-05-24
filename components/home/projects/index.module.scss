@@ -1,0 +1,32 @@
+.projects-wrapper {
+  width: 100%;
+  .title {
+    font-size: var(--title-size);
+    padding: 0 6rem;
+    padding-top: 6rem;
+  }
+  .content {
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    animation-duration: 10s;
+    animation-name: show-animation;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    border: var(--divider-weight) solid var(--divider-color);
+    .img {
+      height: 8rem;
+      object-fit: contain;
+      width: fit-content;
+    }
+  }
+}
+
+@keyframes show-animation {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

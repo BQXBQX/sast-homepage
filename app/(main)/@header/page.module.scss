@@ -1,7 +1,7 @@
 .header-wrapper {
   width: 100%;
   height: 56px;
-  padding: 0 calc((100% - 1100px) / 2);
+  padding: 0 6rem;
   backdrop-filter: saturate(180%) blur(20px);
   font-weight: bold;
   display: flex;
@@ -9,7 +9,7 @@
   position: fixed;
   z-index: 1000;
   color: var(--black-color);
-  position: sticky;
+  position: fixed;
   top: 0;
   .header-content {
     display: flex;

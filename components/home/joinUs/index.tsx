@@ -50,7 +50,7 @@ export const JoinUs = () => {
             是时候在科协书写你的故事了
           </h2>
           <div style={{ padding: "3rem" }}>
-            <span className={sacramento.className} style={{ fontSize: "32px" }}>
+            <span className={sacramento.className} style={{ fontSize: "2rem" }}>
               Saster Igniting the thought.
             </span>
             <Button className={styles.button}>加入我们 ￫</Button>

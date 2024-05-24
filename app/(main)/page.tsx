@@ -6,6 +6,7 @@ import {
   HeroImage,
   Introduction,
   JoinUs,
+  Projects,
   ShowNumber,
   // StoryBegin,
   Welcome,
@@ -20,11 +21,9 @@ export default function Home() {
       <HeroImage></HeroImage>
       <Introduction></Introduction>
       <ShowNumber></ShowNumber>
+      <Projects></Projects>
       <Carousel></Carousel>
       <JoinUs></JoinUs>
-      {/* <StoryBegin></StoryBegin> */}
-      {/* <First></First> */}
-      {/* <Second></Second> */}
     </main>
   );
 }

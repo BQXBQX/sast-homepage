@@ -1,11 +1,12 @@
 .welcome-wrapper {
   width: 100%;
   display: flex;
+  margin-top: 56px;
   align-items: center;
   justify-content: space-between;
+  height: 60rem;
   .span-wrapper {
     padding: 12rem 18rem 12rem 6rem;
-    border-right: var(--divider-weight) solid var(--divider-color);
     width: 60%;
     .title {
       font-size: 5rem;
@@ -19,6 +20,11 @@
       background-color: var(--black-color);
       color: var(--white-color);
     }
+  }
+  .divider {
+    width: var(--divider-weight);
+    height: 100%;
+    background-color: var(--divider-color);
   }
 
   .img-wrapper {
