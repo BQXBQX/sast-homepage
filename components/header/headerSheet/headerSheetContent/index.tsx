@@ -9,7 +9,7 @@ import HeaderSheet3Pic from "@/public/img/headerSheet3.svg";
 import HeaderSheet1Gif from "@/public/img/1.gif";
 import HeaderSheet2Gif from "@/public/img/2.gif";
 import HeaderSheet3Gif from "@/public/img/3.gif";
-import { NotoSansSC } from "@/styles/fonts";
+import { NotoSansSC, NotoSansSCBold } from "@/styles/fonts";
 
 import styles from "./index.module.scss";
 import { UnoptimizedImage } from "../../../unoptimizedImage";
@@ -64,14 +64,16 @@ export const HeaderSheetContent: React.FC<HeaderSheetContentProps> = ({
           <UnoptimizedImage
             src={sheetContentItems[selectItem].svg}
             alt="HeaderSheet1Pic"
-            height={sheetContentItems[selectItem].size}
+            // height={sheetContentItems[selectItem].size}
+            className={styles["sheet-svg"]}
           />
-          <h1>{sheetContentItems[selectItem].h1}</h1>
+          <h1 className={NotoSansSCBold.className}>
+            {sheetContentItems[selectItem].h1}
+          </h1>
           <p>{sheetContentItems[selectItem].p}</p>
           <UnoptimizedImage
             src={sheetContentItems[selectItem].glf}
             alt="HeaderSheet1Gif"
-            width={300}
             className={styles["sheet-glf"]}
             priority
           />

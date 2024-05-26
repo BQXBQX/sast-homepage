@@ -10,9 +10,9 @@
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    width: 120px;
+    width: 8rem;
     .header-sheet-item {
-      font-size: 22px;
+      font-size: 1.5rem;
       cursor: pointer;
       position: relative;
       width: fit-content;
@@ -22,6 +22,7 @@
       color: var(--gray-color);
       margin-bottom: 0.8rem;
       font-weight: lighter;
+      font-size: 1.2rem;
     }
   }
 }

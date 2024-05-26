@@ -1,7 +1,7 @@
 "use client";
 import React, { ReactNode } from "react";
 import styles from "./index.module.scss";
-import { UnoptimizedImage } from "../unoptimizedImage";
+import { UnoptimizedImage } from "@/components/unoptimizedImage";
 import { StaticImageData } from "next/image";
 import { NotoSansSCBold } from "@/styles/fonts";
 

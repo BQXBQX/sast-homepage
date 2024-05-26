@@ -6,14 +6,26 @@
   height: 100%;
   position: relative;
   flex-grow: 1;
-  width: 820px;
+  width: 45rem;
   padding-left: 3rem;
   .sheet-glf {
     position: absolute;
     bottom: 0;
     right: 0;
+    width: 18rem;
+    height: fit-content;
+    object-fit: contain;
+  }
+  .sheet-svg {
+    height: 2.5rem;
+    width: fit-content;
+    object-fit: contain;
   }
   h1 {
-    font-size: 22px;
+    font-size: 1.5rem;
+  }
+  p {
+    font-size: 1.2rem;
+    font-weight: lighter;
   }
 }

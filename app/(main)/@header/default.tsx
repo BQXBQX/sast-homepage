@@ -33,7 +33,7 @@ const Header = () => {
         className={styles["header-wrapper"]}
         id="header-wrapper"
         animate={{
-          height: visible ? 500 : 56,
+          height: visible ? "32rem" : "auto",
           filter: visible
             ? "drop-shadow(0 4px 20px #ffffff)"
             : "drop-shadow(0 0px 0px #ffffff)",
@@ -47,7 +47,13 @@ const Header = () => {
         }}
       >
         <div className={styles["header-content"]}>
-          <UnoptimizedImage src={sastPic} alt="sast" height={35} priority />
+          <UnoptimizedImage
+            src={sastPic}
+            alt="sast"
+            // height={32}
+            priority
+            className={styles.img}
+          />
           <HeaderLink
             openSheet={() => setVisible(true)}
             closeSheet={() => setVisible(false)}

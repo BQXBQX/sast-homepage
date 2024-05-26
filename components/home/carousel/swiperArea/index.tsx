@@ -4,7 +4,7 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 // import { Mousewheel } from "swiper/modules";
 
-import { CarouselCard } from "@/components";
+import { CarouselCard } from "./carouselCard";
 import pic1 from "@/public/img/second1.jpg";
 import pic2 from "@/public/img/second2.jpg";
 import pic3 from "@/public/img/second3.jpg";
@@ -17,10 +17,12 @@ import "swiper/css/pagination";
 import styles from "./index.module.scss";
 import { NotoSansSC } from "@/styles/fonts";
 
-export const Second = () => {
+export const SwiperArea = () => {
   return (
-    <div className={`${NotoSansSC.className} ${styles["second-container"]}`}>
-      <div className={styles["second-wrapper"]}>
+    <div
+      className={`${NotoSansSC.className} ${styles["swiper-area-container"]}`}
+    >
+      <div className={styles["swiper-area-wrapper"]}>
         <div className={styles["card-container"]}>
           <Swiper
             slidesPerView={"auto"}
@@ -29,7 +31,6 @@ export const Second = () => {
               clickable: true,
             }}
             mousewheel={true}
-            // modules={[Mousewheel]}
             className={styles.swiper}
           >
             <SwiperSlide className={styles["swiper-item"]}>
@@ -61,7 +62,6 @@ export const Second = () => {
                 title="文韬武略,样样在行"
                 desc="在科协，“技术”作为引子，管理类创新类部门…在科协这棵繁茂大树下，无论你志在何方，总有伸展方向。"
                 backgroundImg={pic4}
-                // svg={coreSvg}
                 svgRightPosition="-6%"
               ></CarouselCard>
             </SwiperSlide>

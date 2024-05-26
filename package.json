@@ -14,11 +14,7 @@
     "eslint": "eslint ."
   },
   "dependencies": {
-    "@mdx-js/loader": "^3.0.1",
-    "@mdx-js/react": "^3.0.1",
-    "@next/mdx": "^14.2.3",
     "@rspress/mdx-rs": "^0.5.7",
-    "@types/mdx": "^2.0.13",
     "framer-motion": "^11.1.9",
     "next": "14.2.3",
     "react": "^18",

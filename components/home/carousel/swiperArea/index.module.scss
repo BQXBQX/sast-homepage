@@ -1,21 +1,19 @@
-.second-container {
+.swiper-area-container {
   height: fit-content;
-  width: 90%;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 1rem 0;
+  width: 100%;
+  padding: 0 6rem;
   h2 {
-    font-size: 18px;
+    font-size: 1rem;
     margin-bottom: 0.8rem;
+    color: var(--black-color);
   }
-  .second-wrapper {
-    max-width: var(--max-width-second);
+  .swiper-area-wrapper {
     width: 100%;
     .card-container {
       display: flex;
       flex-direction: row;
-      gap: 8px;
+      gap: 0.5rem;
       .swiper {
         overflow: visible;
         width: 100%;
