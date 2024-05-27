@@ -1,7 +1,10 @@
 import React from "react";
 import styles from "./index.module.scss";
 import { SwiperArea } from "./swiperArea";
-export const Carousel = () => {
+import { LngProps } from "@/types/lng";
+
+interface CarouselProps extends LngProps {}
+export const Carousel: React.FC<CarouselProps> = () => {
   return (
     <div className={styles["carousel-wrapper"]}>
       <h1 className={styles.title}>他们眼里的科协</h1>

@@ -28,7 +28,7 @@ export default async function Content({ params }: Params) {
       <div
         className={styles.markdown}
         dangerouslySetInnerHTML={{ __html: post.html }}
-      ></div>
+      />
     </>
   );
 }

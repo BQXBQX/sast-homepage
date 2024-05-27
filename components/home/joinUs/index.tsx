@@ -6,6 +6,7 @@ import SmallBulbSvg from "@/public/img/smallBulb.svg";
 import { UnoptimizedImage } from "@/components/unoptimizedImage";
 import { NotoSansSCBold, sacramento } from "@/styles/fonts";
 import { Button } from "@/components/button";
+import { LngProps } from "@/types/lng";
 
 const data = [
   {
@@ -46,7 +47,9 @@ const data = [
   },
 ];
 
-export const JoinUs = () => {
+interface JoinUsProps extends LngProps {}
+
+export const JoinUs: React.FC<JoinUsProps> = () => {
   return (
     <div className={styles["join-us-wrapper"]}>
       <h1 className={styles.title}>加入我们</h1>

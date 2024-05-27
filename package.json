@@ -16,9 +16,14 @@
   "dependencies": {
     "@rspress/mdx-rs": "^0.5.7",
     "framer-motion": "^11.1.9",
+    "i18next": "^23.11.5",
+    "i18next-browser-languagedetector": "^8.0.0",
+    "i18next-resources-to-backend": "^1.2.1",
     "next": "14.2.3",
+    "next-i18next": "^15.3.0",
     "react": "^18",
     "react-dom": "^18",
+    "react-i18next": "^14.1.2",
     "sharp": "^0.33.3",
     "swiper": "^11.1.3"
   },
