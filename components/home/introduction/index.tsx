@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./index.module.scss";
 import { LngProps } from "@/types/lng";
-import { useTranslation } from "@/lib/i18n";
+import { useTranslation } from "@/lib/i18n/server";
 
 interface IntroductionProps extends LngProps {}
 

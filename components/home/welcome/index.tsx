@@ -5,7 +5,7 @@ import { UnoptimizedImage } from "@/components/unoptimizedImage";
 import BulbPic from "@/public/img/bulb.png";
 
 import styles from "./index.module.scss";
-import { useTranslation } from "@/lib/i18n";
+import { useTranslation } from "@/lib/i18n/server";
 import { LngProps } from "@/types/lng";
 
 interface WelcomeProps extends LngProps {}

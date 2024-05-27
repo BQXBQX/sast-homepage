@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./index.module.scss";
 import { NotoSansSCBold } from "@/styles/fonts";
 import { LngProps } from "@/types/lng";
-import { useTranslation } from "@/lib/i18n";
+import { useTranslation } from "@/lib/i18n/server";
 
 interface ShowNumberProps extends LngProps {}
 
@@ -38,7 +38,7 @@ export const ShowNumber: React.FC<ShowNumberProps> = async ({ lng }) => {
 
   return (
     <div className={styles["show-number-wrapper"]}>
-      <h1 className={styles.title}>数说科协</h1>
+      <h1 className={styles.title}>{t("title")}</h1>
       <div className={styles["number-container"]}>
         {data.map((item, index: number) => {
           return (

@@ -2,11 +2,13 @@ import { ReactOptions, createInstance } from "i18next";
 import { initReactI18next } from "react-i18next/initReactI18next";
 import { getOptions } from "./setting";
 import resourcesToBackend from "i18next-resources-to-backend";
+import LanguageDetector from "i18next-browser-languagedetector";
 
 const initI18next = async (lng: string, ns: string) => {
   const i18nInstance = createInstance();
   await i18nInstance
     .use(initReactI18next)
+    .use(LanguageDetector)
     .use(
       resourcesToBackend(
         (language: string, namespace: string) =>
