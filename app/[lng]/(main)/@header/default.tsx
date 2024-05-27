@@ -33,7 +33,7 @@ const Header = () => {
         className={styles["header-wrapper"]}
         id="header-wrapper"
         animate={{
-          height: visible ? "32rem" : "auto",
+          height: visible ? "32rem" : "3.5rem",
           filter: visible
             ? "drop-shadow(0 4px 20px #ffffff)"
             : "drop-shadow(0 0px 0px #ffffff)",

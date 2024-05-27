@@ -21,8 +21,13 @@
       flex-direction: column;
       justify-content: space-around;
       position: relative;
-      ::before {
-        content: ' " ';
+      // ::before {
+      //   content: ' " ';
+      //   position: absolute;
+      //   left: 15%;
+      //   top: 15%;
+      // }
+      .reference {
         position: absolute;
         left: 15%;
         top: 15%;

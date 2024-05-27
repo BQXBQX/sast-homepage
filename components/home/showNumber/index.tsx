@@ -13,26 +13,32 @@ export const ShowNumber: React.FC<ShowNumberProps> = async ({ lng }) => {
     {
       title: t("year"),
       desc: t("yearContent"),
+      unit: t("yearUnit"),
     },
     {
       title: t("program"),
       desc: t("programContent"),
+      unit: t("programUnit"),
     },
     {
       title: t("award"),
       desc: t("awardContent"),
+      unit: t("awardUnit"),
     },
     {
       title: t("people"),
       desc: t("peopleContent"),
+      unit: t("peopleUnit"),
     },
     {
       title: t("area"),
       desc: t("areaContent"),
+      unit: t("areaUnit"),
     },
     {
       title: t("graduate"),
       desc: t("graduateContent"),
+      unit: t("graduateUnit"),
     },
   ];
 
@@ -43,7 +49,13 @@ export const ShowNumber: React.FC<ShowNumberProps> = async ({ lng }) => {
         {data.map((item, index: number) => {
           return (
             <div className={styles["number-item"]} key={index}>
-              <h1 className={NotoSansSCBold.className}>{item.title}</h1>
+              <h1 className={NotoSansSCBold.className}>
+                {item.title}
+                <span style={{ fontSize: "3rem" }}>{item.unit}</span>
+              </h1>
+              <h1 className={`${NotoSansSCBold.className} ${styles.reference}`}>
+                &quot;
+              </h1>
               <p>{item.desc}</p>
             </div>
           );

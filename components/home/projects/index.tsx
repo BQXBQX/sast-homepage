@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./index.module.scss";
 import { UnoptimizedImage } from "@/components/unoptimizedImage";
 
-import ProjectsPic from "@/public/img/projects.svg";
+import ProjectsPic from "@/public/img/projects.png";
 import { LngProps } from "@/types/lng";
 import { useTranslation } from "@/lib/i18n/server";
 
