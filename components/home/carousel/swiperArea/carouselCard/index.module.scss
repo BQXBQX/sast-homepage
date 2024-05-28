@@ -1,8 +1,8 @@
 .card-container {
-  height: 20rem;
+  height: 30rem;
   background-position: center;
   background-size: cover;
-  width: 30rem;
+  width: 45rem;
   position: relative;
   overflow: hidden;
   padding: 0.5rem;
@@ -11,11 +11,11 @@
   box-sizing: border-box;
   justify-content: space-between;
   cursor: pointer;
-  &:hover {
-    .background-img {
-      transform: scale(1.08);
-    }
-  }
+  // &:hover {
+  //   .background-img {
+  //     transform: scale(1.08);
+  //   }
+  // }
   .background-img {
     transition: all 0.3s var(--cubic-bezier);
     height: 100%;
@@ -47,7 +47,7 @@
   .title {
     margin: 0.4rem;
     z-index: 3;
-    font-size: 2rem;
+    font-size: 2.5rem;
     letter-spacing: 1px;
   }
   .desc {
@@ -56,7 +56,7 @@
     bottom: 0;
     color: var(--white-color);
     margin: 0.6rem;
-    font-size: 1.1rem;
+    font-size: 1.6rem;
     // font-size: 20px;
   }
 }

@@ -44,6 +44,7 @@
   src: url("../public/fonts/jetbrains-mono-latin-400-normal.woff2")
     format("woff2");
   font-weight: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -51,6 +52,14 @@
   src: url("../public/fonts/noto-sans-sc-chinese-simplified-400-normal.woff2")
     format("woff2");
   font-weight: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "noto sans sc";
+  src: url("../public/fonts/noto-sans-latin-400-normal.woff2") format("woff2");
+  font-weight: normal;
+  font-display: swap;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -98,14 +107,14 @@ body {
   max-width: 100vw;
   font-family: "noto sans", "noto sans sc", monospace;
   color-scheme: light;
-
+  transition: font-size linear 0.2s;
   @media screen and (max-width: 1850px) and (min-width: 1700px) {
     font-size: 15px;
   }
   @media screen and (max-width: 1700px) and (min-width: 1380px) {
     font-size: 12px;
   }
-  @media screen and (max-width: 1380px) and (min-width: 1000px) {
+  @media screen and (max-width: 1380px) and (min-width: 1150px) {
     font-size: 10px;
   }
   @media screen and (max-width: 1150px) and (min-width: 920px) {

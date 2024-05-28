@@ -1,0 +1,16 @@
+.wrapper {
+  position: relative;
+  cursor: none;
+}
+.mouse {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: var(--white-color);
+  z-index: 2;
+  border-radius: 40px;
+  height: 80px;
+  width: 80px;
+  cursor: none;
+  transition: all 0.2s ease;
+}
