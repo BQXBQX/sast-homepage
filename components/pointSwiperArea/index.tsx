@@ -18,7 +18,9 @@ export const PointSwiperArea: React.FC<PointSwiperAreaProps> = ({
 
   useEffect(() => {
     const pointSwiperAreaElement = pointSwiperAreaRef.current;
-    function animation(documentEvent: MouseEvent) {
+    let rafId: number | null = null;
+
+    function pointAnimation(documentEvent: MouseEvent) {
       if (pointSwiperAreaElement) {
         const pointSwiperAreaRect =
           pointSwiperAreaElement.getBoundingClientRect();
@@ -36,10 +38,21 @@ export const PointSwiperArea: React.FC<PointSwiperAreaProps> = ({
         }
       }
     }
-    document.addEventListener("mousemove", animation);
+    const handleMouseMove = (event: MouseEvent) => {
+      if (rafId === null) {
+        rafId = requestAnimationFrame(() => {
+          pointAnimation(event);
+          rafId = null;
+        });
+      }
+    };
+    document.addEventListener("mousemove", handleMouseMove);
 
     return () => {
-      document.removeEventListener("mousemove", animation);
+      document.removeEventListener("mousemove", handleMouseMove);
+      if (rafId !== null) {
+        cancelAnimationFrame(rafId);
+      }
     };
   }, []);
 

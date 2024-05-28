@@ -12,5 +12,7 @@
   height: 80px;
   width: 80px;
   cursor: none;
-  transition: all 0.2s ease;
+  transition:
+    transform 0.05s ease,
+    scale 0.2s ease;
 }
