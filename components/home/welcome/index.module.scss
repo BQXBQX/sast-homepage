@@ -19,6 +19,12 @@
       font-size: 1.5rem;
       background-color: var(--black-color);
       color: var(--white-color);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .svg {
+        height: 1.2rem;
+      }
     }
   }
   .divider {

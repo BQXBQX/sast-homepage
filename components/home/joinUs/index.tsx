@@ -8,6 +8,7 @@ import { NotoSansSCBold, sacramento } from "@/styles/fonts";
 import { Button } from "@/components/button";
 import { LngProps } from "@/types/lng";
 import { useTranslation } from "@/lib/i18n/server";
+import { ArrowRight } from "lucide-react";
 
 interface JoinUsProps extends LngProps {}
 
@@ -63,18 +64,30 @@ export const JoinUs: React.FC<JoinUsProps> = async ({ lng }) => {
                 {item.svg}
                 <h2 className={NotoSansSCBold.className}>{item.title}</h2>
                 <p className={styles.desc}>{item.desc}</p>
-                <p className={styles.link}>{item.link}</p>
+                <p className={styles.link}>
+                  {item.link} <ArrowRight className={styles.svg} />
+                </p>
               </div>
             );
           })}
         </div>
         <div className={styles.right}>
           <h2 className={NotoSansSCBold.className}>{t("calling")}</h2>
-          <div style={{ padding: "3rem" }}>
+          <div
+            style={{
+              padding: "3rem",
+              display: "flex",
+              flexDirection: "row",
+              alignItems: "center",
+            }}
+          >
             <span className={sacramento.className} style={{ fontSize: "2rem" }}>
               Saster Igniting the thought.
             </span>
-            <Button className={styles.button}>{t("title")} ￫</Button>
+            <Button className={styles.button}>
+              {t("title")}
+              <ArrowRight className={styles.svg} />
+            </Button>
           </div>
         </div>
       </div>
