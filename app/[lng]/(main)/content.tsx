@@ -19,7 +19,6 @@ export default function Content({ lng }: ContentProps) {
       <HeroImage />
       <Introduction lng={lng} />
       <ShowNumber lng={lng} />
-      {/* <Projects lng={lng} /> */}
       <Carousel lng={lng} />
       <JoinUs lng={lng}></JoinUs>
     </>

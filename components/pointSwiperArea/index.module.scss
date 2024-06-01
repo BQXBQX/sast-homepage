@@ -1,8 +1,9 @@
 .wrapper {
   position: relative;
-  cursor: none;
 }
 .mouse {
+  transform: scale(0);
+  pointer-events: none;
   position: absolute;
   left: 0;
   top: 0;
@@ -11,8 +12,15 @@
   border-radius: 40px;
   height: 80px;
   width: 80px;
-  cursor: none;
   transition:
-    transform 0.05s ease,
-    scale 0.2s ease;
+    transform 0.04s ease,
+    scale 0.15s ease;
+  .svg {
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
 }

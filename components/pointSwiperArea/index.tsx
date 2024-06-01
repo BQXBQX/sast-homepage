@@ -1,15 +1,22 @@
 "use client";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import styles from "./index.module.scss";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 
 interface PointSwiperAreaProps {
   children: React.ReactNode;
+  onRightClick?: () => void;
+  onLeftClick?: () => void;
 }
+
+type PositionType = "left" | "right";
 
 export const PointSwiperArea: React.FC<PointSwiperAreaProps> = ({
   children,
+  onLeftClick,
+  onRightClick,
 }) => {
-  //   const [position, setPosition] = useState<PositionType>(undefined);
+  const [position, setPosition] = useState<PositionType | undefined>(undefined);
   const [visible, setVisible] = useState<boolean>(false);
   const [leftDistance, setLeftDistance] = useState<number>();
   const [topDistance, setTopDistance] = useState<number>();
@@ -28,6 +35,13 @@ export const PointSwiperArea: React.FC<PointSwiperAreaProps> = ({
         const top = documentEvent.clientY - pointSwiperAreaRect.top - 40;
         setLeftDistance(left);
         setTopDistance(top);
+
+        if (documentEvent.clientX < window.innerWidth / 2) {
+          setPosition("left");
+        } else {
+          setPosition("right");
+        }
+
         if (
           documentEvent.clientY > pointSwiperAreaRect.top &&
           documentEvent.clientY < pointSwiperAreaRect.bottom
@@ -38,29 +52,43 @@ export const PointSwiperArea: React.FC<PointSwiperAreaProps> = ({
         }
       }
     }
-    const handleMouseMove = (event: MouseEvent) => {
+
+    const handleMouseMove = (
+      id: number | null,
+      event: MouseEvent,
+      // eslint-disable-next-line no-unused-vars
+      animationFunction: (event: MouseEvent) => void,
+    ) => {
       if (rafId === null) {
         rafId = requestAnimationFrame(() => {
-          pointAnimation(event);
+          animationFunction(event);
           rafId = null;
         });
       }
     };
-    document.addEventListener("mousemove", handleMouseMove);
+    document.addEventListener("pointermove", (event: MouseEvent) =>
+      handleMouseMove(rafId, event, pointAnimation),
+    );
 
     return () => {
-      document.removeEventListener("mousemove", handleMouseMove);
+      document?.removeEventListener("pointermove", (event: MouseEvent) =>
+        handleMouseMove(rafId, event, pointAnimation),
+      );
       if (rafId !== null) {
         cancelAnimationFrame(rafId);
       }
     };
   }, []);
 
+  const handleSwiper = useCallback(() => {
+    if (onLeftClick && onRightClick)
+      position === "left" ? onLeftClick() : onRightClick();
+  }, [onLeftClick, onRightClick, position]);
+
   return (
     <div
       style={{
         height: "fit-content",
-        width: "fit-content",
         position: "relative",
       }}
     >
@@ -68,18 +96,23 @@ export const PointSwiperArea: React.FC<PointSwiperAreaProps> = ({
         id="point-swiper-area"
         ref={pointSwiperAreaRef}
         className={styles.wrapper}
-        // style={{ cursor: visible ? "none" : "" }}
+        onClick={handleSwiper}
       >
         {children}
       </div>
-
       <div
         style={{
           transform: `translateX(${leftDistance}px) translateY(${topDistance}px) scale(${visible ? "1" : "0"})`,
         }}
         ref={mouseRef}
         className={styles.mouse}
-      />
+      >
+        {position === "left" ? (
+          <ArrowLeft className={styles.svg} />
+        ) : (
+          <ArrowRight className={styles.svg} />
+        )}
+      </div>
     </div>
   );
 };
