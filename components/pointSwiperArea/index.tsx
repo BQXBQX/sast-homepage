@@ -31,8 +31,8 @@ export const PointSwiperArea: React.FC<PointSwiperAreaProps> = ({
       if (pointSwiperAreaElement) {
         const pointSwiperAreaRect =
           pointSwiperAreaElement.getBoundingClientRect();
-        const left = documentEvent.clientX - pointSwiperAreaRect.left - 40;
-        const top = documentEvent.clientY - pointSwiperAreaRect.top - 40;
+        const left = documentEvent.clientX - pointSwiperAreaRect.left - 60;
+        const top = documentEvent.clientY - pointSwiperAreaRect.top - 60;
         setLeftDistance(left);
         setTopDistance(top);
 
@@ -66,12 +66,12 @@ export const PointSwiperArea: React.FC<PointSwiperAreaProps> = ({
         });
       }
     };
-    document.addEventListener("pointermove", (event: MouseEvent) =>
+    document.addEventListener("mousemove", (event: MouseEvent) =>
       handleMouseMove(rafId, event, pointAnimation),
     );
 
     return () => {
-      document?.removeEventListener("pointermove", (event: MouseEvent) =>
+      document?.removeEventListener("mousemove", (event: MouseEvent) =>
         handleMouseMove(rafId, event, pointAnimation),
       );
       if (rafId !== null) {
