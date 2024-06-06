@@ -47,6 +47,10 @@ The blockquote element represents content that is quoted from another source, op
 
 ### Blockquote without attribution
 
+# hello world
+
+![blog placeholder](/img/pic3.jpg)
+
 #### Syntax
 
 ```markdown
