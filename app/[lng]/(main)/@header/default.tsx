@@ -50,7 +50,6 @@ const Header = () => {
           <UnoptimizedImage
             src={sastPic}
             alt="sast"
-            // height={32}
             priority
             className={styles.img}
           />
