@@ -43,7 +43,7 @@ export const HeaderLink: React.FC<HeaderLinkProps> = ({
         onMouseEnter={otherLinkHoverHandle}
         href={`/${params.lng}/blog`}
       >
-        活动简介
+        活动博客
       </Link>
       <span
         className={`${NotoSansSC.className} ${styles["header-link-item"]}`}

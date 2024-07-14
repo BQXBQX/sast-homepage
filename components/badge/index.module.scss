@@ -1,0 +1,11 @@
+.badge {
+  all: unset;
+  width: fit-content;
+  height: fit-content;
+  font-size: 1rem;
+  padding: 4px 8px;
+  border-radius: 30px;
+  color: var(--white-color);
+  cursor: pointer;
+  background-color: var(--black-color);
+}
