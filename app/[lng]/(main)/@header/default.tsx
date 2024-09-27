@@ -7,7 +7,7 @@ import sastPic from "@/public/img/sast_logo_black.png";
 import {
   UnoptimizedImage,
   HeaderLink,
-  UserOptions,
+  // UserOptions,
   HeaderSheet,
 } from "@/components";
 
@@ -46,7 +46,7 @@ const Header = () => {
         className={styles["header-wrapper"]}
         id="header-wrapper"
         animate={{
-          height: visible ? "32rem" : "3.5rem",
+          height: visible ? "32rem" : "4rem",
           filter: visible
             ? "drop-shadow(0 4px 20px #ffffff)"
             : "drop-shadow(0 0px 0px #ffffff)",
