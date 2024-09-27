@@ -7,14 +7,18 @@ import { useRef } from "react";
 import { UnoptimizedImage } from "@/components";
 
 import sastLogo from "@/public/img/sast_logo_black.png";
+import { useTranslation } from "@/lib/i18n/client";
+import { useParams } from "next/navigation";
 const Footer = () => {
   const year = useRef(new Date().getFullYear());
+  const params = useParams();
+  const { t } = useTranslation(params.lng as unknown as string, "footer");
   return (
     <footer className={styles.footerWrap}>
       <div className={styles.footerBody}>
         <UnoptimizedImage src={sastLogo} alt={"logo"} width={100} height={65} />
         <div className={styles.footerSection}>
-          <div className={styles.title}>SAST 服务</div>
+          <div className={styles.title}>{t("serve")}</div>
           <div className={styles.content}>
             <div className={styles.link}>
               <Link href={"https://link.sast.fun"}>Link</Link>
@@ -34,7 +38,7 @@ const Footer = () => {
           </div>
         </div>
         <div className={styles.footerSection}>
-          <div className={styles.title}>SAST 社区</div>
+          <div className={styles.title}>{t("community")}</div>
           <div className={styles.content}>
             <Link
               className={styles.link}
@@ -47,15 +51,12 @@ const Footer = () => {
           </div>
         </div>
         <div className={styles.footerSection}>
-          <div className={styles.title}>联系我们</div>
+          <div className={styles.title}>{t("contact")}</div>
           <div className={styles.content}>
             <div className={styles.item}>
               Email: <Link href={"mailto:sast@sast.fun"}>sast@sast.fun</Link>
             </div>
-            <div className={styles.item}>
-              地址:
-              南京市栖霞区文苑路9号南京邮电大学仙林校区大学生活动中心一楼青柚创新汇
-            </div>
+            <div className={styles.item}>{t("position")}</div>
           </div>
         </div>
       </div>

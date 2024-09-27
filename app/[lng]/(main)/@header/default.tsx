@@ -46,7 +46,7 @@ const Header = () => {
         className={styles["header-wrapper"]}
         id="header-wrapper"
         animate={{
-          height: visible ? "32rem" : "5rem",
+          height: visible ? "32rem" : "4rem",
           filter: visible
             ? "drop-shadow(0 4px 20px #ffffff)"
             : "drop-shadow(0 0px 0px #ffffff)",
@@ -84,12 +84,12 @@ const Header = () => {
             <div
               style={{
                 cursor: "pointer",
-                height: "2rem",
+                height: "1.6rem",
                 alignItems: "center",
               }}
               onClick={handleChangeLanguage}
             >
-              <Languages style={{ height: "100%", width: "2rem" }} />
+              <Languages style={{ height: "100%", width: "1.6rem" }} />
             </div>
           </div>
         </div>

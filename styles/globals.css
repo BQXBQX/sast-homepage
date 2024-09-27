@@ -37,6 +37,7 @@
   --desc-color: #818181;
   --title-size: 4rem;
   --divider-weight: 2px;
+  line-height: 1.6;
 }
 
 @font-face {
@@ -142,7 +143,7 @@ body {
   }
 
   @media screen and (max-width: 1380px) and (min-width: 1150px) {
-    font-size: 10px;
+    font-size: 12px;
   }
 
   @media screen and (max-width: 1150px) and (min-width: 920px) {
