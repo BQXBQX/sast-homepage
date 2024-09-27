@@ -8,6 +8,7 @@ import { NotoSansSC } from "@/styles/fonts";
 
 import styles from "./index.module.scss";
 import { useParams } from "next/navigation";
+import { useTranslation } from "@/lib/i18n/client";
 
 interface HeaderLinkProps {
   openSheet: () => void;
@@ -23,6 +24,8 @@ export const HeaderLink: React.FC<HeaderLinkProps> = ({
     closeSheet();
   };
 
+  const { t } = useTranslation(params.lng as unknown as string, "header");
+
   return (
     <div className={styles["header-link-wrapper"]}>
       <Link
@@ -30,26 +33,26 @@ export const HeaderLink: React.FC<HeaderLinkProps> = ({
         onMouseEnter={otherLinkHoverHandle}
         href={`/${params.lng}`}
       >
-        主页
+        {t("home")}
       </Link>
       <span
         className={`${NotoSansSC.className} ${styles["header-link-item"]} `}
         onMouseEnter={() => openSheet()}
       >
-        部门介绍
+        {t("departmentIntroduction")}
       </span>
       <Link
         className={`${NotoSansSC.className} ${styles["header-link-item"]}`}
         onMouseEnter={otherLinkHoverHandle}
         href={`/${params.lng}/blog`}
       >
-        活动简介
+        {t("eventBlog")}
       </Link>
       <span
         className={`${NotoSansSC.className} ${styles["header-link-item"]}`}
         onMouseEnter={otherLinkHoverHandle}
       >
-        加入我们
+        {t("joinUs")}
       </span>
     </div>
   );

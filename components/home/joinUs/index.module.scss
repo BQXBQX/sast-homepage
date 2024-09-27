@@ -1,15 +1,18 @@
 .join-us-wrapper {
   width: 100%;
+
   .title {
     font-size: var(--title-size);
     padding-top: 6rem;
     padding-left: 6rem;
   }
+
   .content {
     border-top: var(--divider-weight) solid var(--divider-color);
     display: flex;
     flex-direction: row;
     align-items: flex-end;
+
     .right {
       // padding: 3rem;
       height: 100%;
@@ -19,6 +22,7 @@
       display: flex;
       flex-direction: column;
       align-items: flex-end;
+
       h2 {
         border-top: var(--divider-weight) solid var(--divider-color);
         font-size: 3rem;
@@ -27,6 +31,7 @@
         padding-top: 3rem;
         padding-right: 3rem;
       }
+
       .button {
         display: flex;
         align-items: center;
@@ -34,15 +39,18 @@
         font-size: 1rem;
         background-color: var(--black-color);
         color: var(--white-color);
+
         .svg {
           height: 1.2rem;
         }
       }
     }
+
     .left {
       display: flex;
       flex-direction: column;
       width: 60%;
+
       .item {
         padding: 3rem 6rem;
         gap: 1rem;
@@ -52,19 +60,29 @@
         justify-content: space-evenly;
         border-right: var(--divider-weight) solid var(--divider-color);
         border-bottom: var(--divider-weight) solid var(--divider-color);
+
         h2 {
           font-size: 3rem;
         }
+
         .desc {
           color: var(--desc-color);
           font-size: 1.2rem;
         }
+
         .link {
           font-size: 1.6rem;
+          cursor: pointer;
+
+          &:hover {
+            text-decoration: underline;
+          }
+
           .svg {
             height: 1.2rem;
           }
         }
+
         .svg {
           height: 5rem;
           width: fit-content;

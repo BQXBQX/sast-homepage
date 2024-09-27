@@ -56,7 +56,7 @@
 }
 
 @font-face {
-  font-family: "noto sans sc";
+  font-family: "noto sans";
   src: url("../public/fonts/noto-sans-latin-400-normal.woff2") format("woff2");
   font-weight: normal;
   font-display: swap;
@@ -95,6 +95,30 @@
   }
 }
 
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+}
+
+h3 {
+  font-size: 1.6rem;
+}
+
+h4 {
+  font-size: 1.4rem;
+}
+
+h5 {
+  font-size: 1.2rem;
+}
+
+h6 {
+  font-size: 1.1rem;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -108,15 +132,19 @@ body {
   font-family: "noto sans", "noto sans sc", monospace;
   color-scheme: light;
   transition: font-size linear 0.2s;
+
   @media screen and (max-width: 1850px) and (min-width: 1700px) {
     font-size: 15px;
   }
+
   @media screen and (max-width: 1700px) and (min-width: 1380px) {
     font-size: 12px;
   }
+
   @media screen and (max-width: 1380px) and (min-width: 1150px) {
     font-size: 10px;
   }
+
   @media screen and (max-width: 1150px) and (min-width: 920px) {
     font-size: 8px;
     --divider-weight: 1px;

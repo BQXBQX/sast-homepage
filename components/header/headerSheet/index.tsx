@@ -7,6 +7,8 @@ import { NotoSansSC, NotoSansSCBold } from "@/styles/fonts";
 
 import { HeaderSheetContent } from "./headerSheetContent";
 import styles from "./index.module.scss";
+import { useTranslation } from "@/lib/i18n/client";
+import { useParams } from "next/navigation";
 
 interface HeaderSheetProps {
   visible?: boolean;
@@ -14,6 +16,8 @@ interface HeaderSheetProps {
 
 export const HeaderSheet: React.FC<HeaderSheetProps> = ({ visible }) => {
   const [selectItem, setSelectItem] = useState<number>();
+  const params = useParams();
+  const { t } = useTranslation(params.lng as unknown as string, "header");
 
   const item = {
     hidden: { opacity: 0, y: -5, transition: { duration: 2 } },
@@ -30,7 +34,7 @@ export const HeaderSheet: React.FC<HeaderSheetProps> = ({ visible }) => {
     hidden: { opacity: 0, y: -5, transition: { duration: 0.2 } },
   };
 
-  const sheetItems = ["技术类部门", "建设类部门", "创新类部门"];
+  const sheetItems = [t("department-1"), t("department-2"), t("department-3")];
 
   useEffect(() => {
     !visible && setSelectItem(undefined);
@@ -49,7 +53,7 @@ export const HeaderSheet: React.FC<HeaderSheetProps> = ({ visible }) => {
               initial="hidden"
               exit="hidden"
             >
-              部门介绍
+              {t("departmentIntroduction")}
             </motion.span>
             {sheetItems.map((item, i) => {
               return (

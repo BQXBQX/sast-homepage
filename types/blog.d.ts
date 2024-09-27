@@ -7,6 +7,5 @@ export type Post = {
   html: string;
   links: string[];
   category: string;
-  mirrorId?: string;
   heroImage: string;
 };

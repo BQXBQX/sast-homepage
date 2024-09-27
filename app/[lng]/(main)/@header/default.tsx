@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useCallback, useState } from "react";
 
 import { AnimatePresence, motion } from "framer-motion";
 
@@ -12,9 +12,13 @@ import {
 } from "@/components";
 
 import styles from "./page.module.scss";
+import { Languages } from "lucide-react";
+import { useParams, useRouter } from "next/navigation";
 
 const Header = () => {
   const [visible, setVisible] = useState<boolean>();
+  const params = useParams();
+  const router = useRouter();
 
   const headerSheetBackAnimation = {
     hidden: {
@@ -26,6 +30,15 @@ const Header = () => {
       backdropFilter: "saturate(180%) blur(20px)",
     },
   };
+
+  // TODO: jump other params
+  const handleChangeLanguage = useCallback(() => {
+    if (params.lng === "en") {
+      router.push("/zh");
+    } else {
+      router.push("/en");
+    }
+  }, []);
 
   return (
     <>
@@ -57,7 +70,28 @@ const Header = () => {
             openSheet={() => setVisible(true)}
             closeSheet={() => setVisible(false)}
           />
-          <UserOptions />
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              alignItems: "center",
+              justifyContent: "center",
+              gap: "1rem",
+            }}
+          >
+            {/*  TODO: 后期加入 link 登录 */}
+            {/* <UserOptions /> */}
+            <div
+              style={{
+                cursor: "pointer",
+                height: "1.6rem",
+                alignItems: "center",
+              }}
+              onClick={handleChangeLanguage}
+            >
+              <Languages style={{ height: "100%", width: "1.6rem" }} />
+            </div>
+          </div>
         </div>
         <HeaderSheet visible={visible} />
       </motion.nav>
