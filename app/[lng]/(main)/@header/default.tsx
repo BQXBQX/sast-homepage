@@ -7,7 +7,7 @@ import sastPic from "@/public/img/sast_logo_black.png";
 import {
   UnoptimizedImage,
   HeaderLink,
-  UserOptions,
+  // UserOptions,
   HeaderSheet,
 } from "@/components";
 
