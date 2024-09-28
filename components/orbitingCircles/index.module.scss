@@ -1,0 +1,77 @@
+@mixin moving-div {
+  position: absolute;
+  top: 210px;
+  left: 0px;
+  // transform: translate(-50%, -50%);
+  transform-origin: center center;
+  cursor: pointer;
+  border-radius: 50%;
+}
+.container {
+  --d: 15s;
+  --s: 0.5;
+  left: 400px;
+  height: 480px;
+  width: 480px;
+  margin-top: 4rem;
+  position: relative;
+  color: transparent;
+  box-sizing: border-box;
+  .linear-span {
+    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.2));
+    font-size: 180px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  .evento-div {
+    pointer-events: none;
+    width: 480px;
+    height: 60px;
+    animation:
+      r linear infinite var(--d) running,
+      r linear infinite calc(var(--d) / var(--s)) reverse paused;
+    animation-composition: add;
+    @include moving-div();
+    .img {
+      pointer-events: auto;
+      transform: translateX(-50%);
+      animation:
+        r-reverse linear infinite var(--d) running,
+        r-reverse linear infinite calc(var(--d) / var(--s)) reverse paused;
+      animation-composition: add;
+    }
+    &:hover {
+      animation-play-state: running;
+      .img {
+        animation-play-state: running;
+      }
+    }
+  }
+  .oj-div {
+    width: 480px;
+    height: 80px;
+    animation:
+      r2 linear infinite var(--d) running,
+      r2 linear infinite calc(var(--d) / var(--s)) reverse paused;
+    animation-composition: add;
+    @include moving-div();
+  }
+}
+
+@keyframes r {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+@keyframes r-reverse {
+  to {
+    transform: rotate(-1turn);
+  }
+}

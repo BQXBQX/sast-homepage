@@ -54,6 +54,13 @@ export const HeaderLink: React.FC<HeaderLinkProps> = ({
       >
         {t("joinUs")}
       </span>
+      <Link
+        className={`${NotoSansSC.className} ${styles["header-link-item"]}`}
+        onMouseEnter={otherLinkHoverHandle}
+        href={`/${params.lng}/project`}
+      >
+        {t("project")}
+      </Link>
     </div>
   );
 };
