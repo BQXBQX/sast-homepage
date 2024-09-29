@@ -1,6 +1,7 @@
+"use client";
+
 import React from "react";
 
-"use client";
 import { useEffect, useState } from "react";
 import { OrbitingCircles } from "../orbitingCircles";
 import styles from "./index.module.scss";
