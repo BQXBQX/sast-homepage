@@ -1,0 +1,162 @@
+@mixin moving-div {
+  position: absolute;
+  top: calc(50% - 30px);
+  transform-origin: center center;
+  cursor: pointer;
+  border-radius: 50%;
+  pointer-events: none;
+  animation-composition: add;
+  height: 60px;
+  &:hover {
+    animation-play-state: running;
+    img {
+      animation-play-state: running;
+    }
+  }
+}
+.container {
+  --s: 0.5;
+  height: 30rem;
+  width: 30rem;
+  position: relative;
+  color: transparent;
+  box-sizing: border-box;
+  .linear-span {
+    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.2));
+    font-size: 11.25rem;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  .evento-div {
+    --d: 15s;
+    pointer-events: none;
+    width: 100%;
+    animation:
+      r linear infinite var(--d) running,
+      r linear infinite calc(var(--d) / var(--s)) reverse paused;
+    @include moving-div();
+    .evento-img {
+      pointer-events: auto;
+      transform: translateX(-50%);
+      animation:
+        r-reverse linear infinite var(--d) running,
+        r-reverse linear infinite calc(var(--d) / var(--s)) reverse paused;
+      animation-composition: add;
+    }
+  }
+  .oj-div {
+    --d: 15s;
+    width: 100%;
+    animation:
+      r linear infinite var(--d) running,
+      r linear infinite calc(var(--d) / var(--s)) reverse paused;
+    @include moving-div();
+    .oj-img {
+      position: absolute;
+      right: 0;
+      pointer-events: auto;
+      transform: translateX(50%);
+      animation:
+        r-reverse linear infinite var(--d) running,
+        r-reverse linear infinite calc(var(--d) / var(--s)) reverse paused;
+      animation-composition: add;
+    }
+  }
+  .approve-div {
+    --d: 12s;
+    pointer-events: none;
+    width: 70%;
+    left: calc(50% - 35%);
+    animation:
+      r-reverse linear infinite var(--d) running,
+      r-reverse linear infinite calc(var(--d) / var(--s)) reverse paused;
+    @include moving-div();
+    .approve-img {
+      position: absolute;
+      right: 0;
+      pointer-events: auto;
+      transform: translateX(50%);
+      animation:
+        r linear infinite var(--d) running,
+        r linear infinite calc(var(--d) / var(--s)) reverse paused;
+      animation-composition: add;
+    }
+  }
+  .img-div {
+    --d: 12s;
+    pointer-events: none;
+    width: 70%;
+    left: calc(50% - 35%);
+    animation:
+      r-reverse linear infinite var(--d) running,
+      r-reverse linear infinite calc(var(--d) / var(--s)) reverse paused;
+    @include moving-div();
+    .img-img {
+      position: absolute;
+      pointer-events: auto;
+      transform: translateX(-50%);
+      animation:
+        r linear infinite var(--d) running,
+        r linear infinite calc(var(--d) / var(--s)) reverse paused;
+      animation-composition: add;
+    }
+  }
+  .link-div {
+    --d: 8s;
+    pointer-events: none;
+    width: 40%;
+    left: calc(50% - 20%);
+    animation:
+      r linear infinite var(--d) running,
+      r linear infinite calc(var(--d) / var(--s)) reverse paused;
+    @include moving-div();
+    .link-img {
+      position: absolute;
+      pointer-events: auto;
+      transform: translateX(-50%);
+      animation:
+        r-reverse linear infinite var(--d) running,
+        r-reverse linear infinite calc(var(--d) / var(--s)) reverse paused;
+      animation-composition: add;
+    }
+  }
+  .ui-div {
+    --d: 8s;
+    pointer-events: none;
+    width: 40%;
+    left: calc(50% - 20%);
+    animation:
+      r linear infinite var(--d) running,
+      r linear infinite calc(var(--d) / var(--s)) reverse paused;
+    animation-composition: add;
+    @include moving-div();
+    .ui-img {
+      position: absolute;
+      right: 0;
+      pointer-events: auto;
+      transform: translateX(50%);
+      animation:
+        r-reverse linear infinite var(--d) running,
+        r-reverse linear infinite calc(var(--d) / var(--s)) reverse paused;
+      animation-composition: add;
+    }
+  }
+}
+
+@keyframes r {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+@keyframes r-reverse {
+  to {
+    transform: rotate(-1turn);
+  }
+}
