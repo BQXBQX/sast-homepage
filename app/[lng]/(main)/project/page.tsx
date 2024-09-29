@@ -1,4 +1,5 @@
 import { OrbitingCircles } from "@/components";
+import { Project } from "@/components/project";
 export default function Test() {
-  return <OrbitingCircles></OrbitingCircles>;
+  return <Project></Project>;
 }

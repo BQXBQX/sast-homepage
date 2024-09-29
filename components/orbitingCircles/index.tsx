@@ -1,6 +1,10 @@
 import { UnoptimizedImage } from "../unoptimizedImage";
 import styles from "./index.module.scss";
-export const OrbitingCircles = () => {
+
+interface OrbitingCirclesProps {
+  onHover: (value: string) => void;
+}
+export const OrbitingCircles = (props: OrbitingCirclesProps) => {
   return (
     <>
       <div className={styles["container"]}>
@@ -31,24 +35,78 @@ export const OrbitingCircles = () => {
             fill="none"
           />
         </svg>
-        <div className={styles["evento-div"]}>
-          <div></div>
+        <div
+          className={styles["evento-div"]}
+          onMouseEnter={() => props.onHover("evento")}
+        >
           <UnoptimizedImage
             src="/project/evento.svg"
             alt="evento"
-            height={50}
-            width={50}
-            className={styles.img}
+            height={60}
+            width={60}
+            className={styles["evento-img"]}
           ></UnoptimizedImage>
         </div>
-        {/* <div className={styles["oj-div"]}>
+        <div
+          className={styles["oj-div"]}
+          onMouseEnter={() => props.onHover("oj")}
+        >
           <UnoptimizedImage
             src="/project/oj.svg"
             alt="oj"
-            height={70}
-            width={70}
+            height={50}
+            width={50}
+            className={styles["oj-img"]}
           ></UnoptimizedImage>
-        </div> */}
+        </div>
+        <div
+          className={styles["approve-div"]}
+          onMouseEnter={() => props.onHover("approve")}
+        >
+          <UnoptimizedImage
+            src="/project/approve.svg"
+            alt="oj"
+            height={30}
+            width={30}
+            className={styles["approve-img"]}
+          ></UnoptimizedImage>
+        </div>
+        <div
+          className={styles["img-div"]}
+          onMouseEnter={() => props.onHover("img")}
+        >
+          <UnoptimizedImage
+            src="/project/img.svg"
+            alt="oj"
+            height={50}
+            width={50}
+            className={styles["img-img"]}
+          ></UnoptimizedImage>
+        </div>
+        <div
+          className={styles["link-div"]}
+          onMouseEnter={() => props.onHover("link")}
+        >
+          <UnoptimizedImage
+            src="/project/link.svg"
+            alt="oj"
+            height={50}
+            width={55}
+            className={styles["link-img"]}
+          ></UnoptimizedImage>
+        </div>
+        <div
+          className={styles["ui-div"]}
+          onMouseEnter={() => props.onHover("ui")}
+        >
+          <UnoptimizedImage
+            src="/project/ui.svg"
+            alt="oj"
+            height={40}
+            width={40}
+            className={styles["ui-img"]}
+          ></UnoptimizedImage>
+        </div>
       </div>
     </>
   );
