@@ -1,3 +1,5 @@
+import React from "react";
+
 import { UnoptimizedImage } from "../unoptimizedImage";
 import styles from "./index.module.scss";
 

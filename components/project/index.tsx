@@ -1,3 +1,5 @@
+import React from "react";
+
 "use client";
 import { useEffect, useState } from "react";
 import { OrbitingCircles } from "../orbitingCircles";
@@ -5,26 +7,26 @@ import styles from "./index.module.scss";
 import { motion } from "framer-motion";
 import { NotoSansSC } from "@/styles/fonts";
 
-const content = [
-  {
-    id: "evento",
-    title: "SAST-Evento",
-    desc: "Our own lark",
-    link: [
-      "https://github.com/NJUPT-SAST/sast-evento",
-      "https://github.com/NJUPT-SAST/sast-evento-backend",
-    ],
-  },
-  {
-    id: "oj",
-    title: "SAST-Online-Judge",
-    desc: "Our own Online Judge",
-    link: [
-      "https://github.com/NJUPT-SAST/sastoj",
-      "https://github.com/NJUPT-SAST/sastoj-frontend",
-    ],
-  },
-];
+// const content = [
+//   {
+//     id: "evento",
+//     title: "SAST-Evento",
+//     desc: "Our own lark",
+//     link: [
+//       "https://github.com/NJUPT-SAST/sast-evento",
+//       "https://github.com/NJUPT-SAST/sast-evento-backend",
+//     ],
+//   },
+//   {
+//     id: "oj",
+//     title: "SAST-Online-Judge",
+//     desc: "Our own Online Judge",
+//     link: [
+//       "https://github.com/NJUPT-SAST/sastoj",
+//       "https://github.com/NJUPT-SAST/sastoj-frontend",
+//     ],
+//   },
+// ];
 
 export const Project = () => {
   const sheetContentAnimation = {
