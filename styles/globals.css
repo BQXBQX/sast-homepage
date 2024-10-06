@@ -33,10 +33,10 @@
   --phone-width: 900px;
   --gray-color: #808080;
   --max-width-second: 900px;
-  --divider-color: #d6d6d6;
+  --divider-color: #dedede;
   --desc-color: #818181;
   --title-size: 4rem;
-  --divider-weight: 2px;
+  --divider-weight: 1.6px;
   line-height: 1.6;
 }
 
@@ -148,7 +148,7 @@ body {
 
   @media screen and (max-width: 1150px) and (min-width: 920px) {
     font-size: 8px;
-    --divider-weight: 1px;
+    /* --divider-weight: 1px; */
   }
 }
 

@@ -20,9 +20,9 @@ export const HeaderLink: React.FC<HeaderLinkProps> = ({
   closeSheet,
 }) => {
   const params = useParams();
-  const otherLinkHoverHandle = () => {
-    closeSheet();
-  };
+  // const otherLinkHoverHandle = () => {
+  //   closeSheet();
+  // };
 
   const { t } = useTranslation(params.lng as unknown as string, "header");
 
@@ -30,37 +30,37 @@ export const HeaderLink: React.FC<HeaderLinkProps> = ({
     <div className={styles["header-link-wrapper"]}>
       <Link
         className={`${NotoSansSC.className} ${styles["header-link-item"]}`}
-        onMouseEnter={otherLinkHoverHandle}
+        // onMouseEnter={otherLinkHoverHandle}
         href={`/${params.lng}`}
       >
         {t("home")}
       </Link>
       <span
         className={`${NotoSansSC.className} ${styles["header-link-item"]} `}
-        onMouseEnter={() => openSheet()}
+        // onMouseEnter={() => openSheet()}
       >
         {t("departmentIntroduction")}
       </span>
       <Link
         className={`${NotoSansSC.className} ${styles["header-link-item"]}`}
-        onMouseEnter={otherLinkHoverHandle}
+        // onMouseEnter={otherLinkHoverHandle}
         href={`/${params.lng}/blog`}
       >
         {t("eventBlog")}
       </Link>
       <span
         className={`${NotoSansSC.className} ${styles["header-link-item"]}`}
-        onMouseEnter={otherLinkHoverHandle}
+        // onMouseEnter={otherLinkHoverHandle}
       >
         {t("joinUs")}
       </span>
-      <Link
+      {/* <Link
         className={`${NotoSansSC.className} ${styles["header-link-item"]}`}
         onMouseEnter={otherLinkHoverHandle}
         href={`/${params.lng}/project`}
       >
         {t("project")}
-      </Link>
+      </Link> */}
     </div>
   );
 };

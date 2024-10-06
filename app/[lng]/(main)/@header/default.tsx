@@ -70,6 +70,14 @@ const Header = () => {
             openSheet={() => setVisible(true)}
             closeSheet={() => setVisible(false)}
           />
+
+          <div
+            style={{
+              height: "100%",
+              width: "1px",
+              backgroundColor: "#dedede",
+            }}
+          ></div>
           <div
             style={{
               display: "flex",
@@ -89,7 +97,7 @@ const Header = () => {
               }}
               onClick={handleChangeLanguage}
             >
-              <Languages style={{ height: "100%", width: "1.6rem" }} />
+              <Languages style={{ height: "100%", width: "1.3rem" }} />
             </div>
           </div>
         </div>
