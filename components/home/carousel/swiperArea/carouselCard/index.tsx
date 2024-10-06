@@ -40,13 +40,13 @@ export const CarouselCard: React.FC<CarouselCardProps> = ({
           style={{ bottom: svgBottomPosition, right: svgRightPosition }}
         ></UnoptimizedImage>
       )}
-      <h1
-        className={`${NotoSansSCBold.className} ${styles.title}`}
-        style={{ color: color }}
-      >
-        {title}
-      </h1>
       <p className={styles.desc} style={{ color: color }}>
+        <h1
+          className={`${NotoSansSCBold.className} ${styles.title}`}
+          style={{ color: color }}
+        >
+          {title}
+        </h1>
         {desc}
       </p>
     </div>
