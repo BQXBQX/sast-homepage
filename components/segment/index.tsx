@@ -1,4 +1,5 @@
 "use client";
+import React from "react";
 import { useTranslation } from "@/lib/i18n/client";
 import styles from "./index.module.scss";
 import { useParams, usePathname, useRouter } from "next/navigation";

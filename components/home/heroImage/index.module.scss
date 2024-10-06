@@ -11,6 +11,8 @@
     height: 100%;
     overflow: hidden;
     box-sizing: border-box;
+    border-left: var(--divider-weight) solid var(--divider-color);
+    border-right: var(--divider-weight) solid var(--divider-color);
     .swiper-item {
       max-width: var(--max-width) !important;
       width: 100%;
