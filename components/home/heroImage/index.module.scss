@@ -5,10 +5,11 @@
   position: relative;
   overflow: visible;
   box-sizing: border-box;
+  padding: 0 12rem;
   .hero-image-swiper {
     width: 100%;
     height: 100%;
-    overflow: visible;
+    overflow: hidden;
     box-sizing: border-box;
     .swiper-item {
       max-width: var(--max-width) !important;
