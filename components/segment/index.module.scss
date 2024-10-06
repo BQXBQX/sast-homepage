@@ -1,0 +1,30 @@
+.segment-container {
+  position: fixed;
+  top: 0.6rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+  background-color: white;
+  padding: 0.4rem 0.6rem;
+  display: flex;
+  flex-direction: row;
+  gap: 0.4rem;
+  border-radius: 100rem;
+  box-shadow: 0 0px 4px #dedede;
+
+  span {
+    cursor: pointer;
+    z-index: 90;
+    padding: 0.2rem 0.8rem;
+    box-sizing: border-box;
+    font-size: 1rem;
+  }
+
+  .window {
+    position: absolute;
+    background-color: #f5cf64;
+    z-index: 9;
+    border-radius: 100rem;
+    transition: all 0.35s var(--cubic-bezier);
+  }
+}
