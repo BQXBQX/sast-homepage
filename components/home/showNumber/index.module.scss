@@ -3,6 +3,14 @@
   display: flex;
   flex-direction: column;
   padding-top: 6rem;
+  border-left: var(--divider-weight) solid var(--divider-color);
+  border-right: var(--divider-weight) solid var(--divider-color);
+
+  background-size: 6rem 6rem;
+  background-image: url("../../../public/img/background.png");
+  background-repeat: repeat;
+  position: relative;
+
   .title {
     padding: 0 6rem;
     font-size: var(--title-size);
@@ -21,19 +29,13 @@
       flex-direction: column;
       justify-content: space-around;
       position: relative;
-      // ::before {
-      //   content: ' " ';
-      //   position: absolute;
-      //   left: 15%;
-      //   top: 15%;
-      // }
       .reference {
         position: absolute;
         left: 15%;
         top: 15%;
       }
       h1 {
-        font-size: 5rem;
+        font-size: 4rem;
         text-align: end;
       }
       p {
