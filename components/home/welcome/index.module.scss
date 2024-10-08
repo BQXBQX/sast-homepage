@@ -1,18 +1,30 @@
 .welcome-wrapper {
   width: 100%;
   display: flex;
-  margin-top: 3.5rem;
   align-items: center;
   justify-content: space-between;
   height: 50rem;
+  border-left: var(--divider-weight) solid var(--divider-color);
+  border-right: var(--divider-weight) solid var(--divider-color);
+  // background-ima;
+  background-size: 6rem 6rem;
+  background-image: url("../../../public/img/background.png");
+  background-repeat: repeat;
   .span-wrapper {
     padding: 12rem 18rem 12rem 6rem;
     width: 60%;
     .title {
-      font-size: 5rem;
+      font-size: var(--title-size);
+      white-space: nowrap;
+      .look {
+        background-color: #ff7051;
+        padding: 8px 16px;
+        position: relative;
+      }
     }
     .desc {
-      font-size: var(--title-size);
+      font-size: var(--second-title-size);
+      white-space: nowrap;
     }
     .button {
       margin-top: 4rem;

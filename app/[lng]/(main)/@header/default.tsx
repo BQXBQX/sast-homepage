@@ -1,22 +1,17 @@
 "use client";
-import React, { useCallback, useState } from "react";
-
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-
 import sastPic from "@/public/img/sast_logo_black.png";
-import {
-  UnoptimizedImage,
-  HeaderLink,
-  // UserOptions,
-  HeaderSheet,
-} from "@/components";
-
+import { UnoptimizedImage, HeaderLink, HeaderSheet } from "@/components";
 import styles from "./page.module.scss";
 import { Languages } from "lucide-react";
 import { useParams, useRouter } from "next/navigation";
+import { Segment } from "@/components/segment";
 
 const Header = () => {
   const [visible, setVisible] = useState<boolean>();
+  const [isHeaderVisible, setIsHeaderVisible] = useState(true); // To track header visibility
+  const headerRef = useRef<HTMLDivElement>(null); // Reference to the header
   const params = useParams();
   const router = useRouter();
 
@@ -31,13 +26,32 @@ const Header = () => {
     },
   };
 
-  // TODO: jump other params
   const handleChangeLanguage = useCallback(() => {
     if (params.lng === "en") {
       router.push("/zh");
     } else {
       router.push("/en");
     }
+  }, [params.lng, router]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsHeaderVisible(entry.isIntersecting);
+      },
+      { threshold: 0.1 },
+    );
+
+    const headerElement = headerRef.current;
+    if (headerElement) {
+      observer.observe(headerElement);
+    }
+
+    return () => {
+      if (headerElement) {
+        observer.unobserve(headerElement);
+      }
+    };
   }, []);
 
   return (
@@ -45,6 +59,7 @@ const Header = () => {
       <motion.nav
         className={styles["header-wrapper"]}
         id="header-wrapper"
+        ref={headerRef} // Attach ref to the header element
         animate={{
           height: visible ? "32rem" : "4rem",
           filter: visible
@@ -70,6 +85,14 @@ const Header = () => {
             openSheet={() => setVisible(true)}
             closeSheet={() => setVisible(false)}
           />
+
+          <div
+            style={{
+              height: "100%",
+              width: "1px",
+              backgroundColor: "#dedede",
+            }}
+          ></div>
           <div
             style={{
               display: "flex",
@@ -79,8 +102,6 @@ const Header = () => {
               gap: "1rem",
             }}
           >
-            {/*  TODO: 后期加入 link 登录 */}
-            {/* <UserOptions /> */}
             <div
               style={{
                 cursor: "pointer",
@@ -89,7 +110,7 @@ const Header = () => {
               }}
               onClick={handleChangeLanguage}
             >
-              <Languages style={{ height: "100%", width: "1.6rem" }} />
+              <Languages style={{ height: "100%", width: "1.3rem" }} />
             </div>
           </div>
         </div>
@@ -110,6 +131,8 @@ const Header = () => {
           />
         )}
       </AnimatePresence>
+
+      <AnimatePresence>{!isHeaderVisible && <Segment />}</AnimatePresence>
     </>
   );
 };
