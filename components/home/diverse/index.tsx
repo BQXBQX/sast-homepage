@@ -59,7 +59,7 @@ export const Diverse: React.FC<JoinUsProps> = async ({ lng }) => {
       <div className={styles["join-us-wrapper"]}>
         <div
           style={{
-            height: "12rem",
+            height: "8rem",
             borderTop: "var(--divider-weight) solid var(--divider-color)",
             borderBottom: "var(--divider-weight) solid var(--divider-color)",
             padding: "0 12rem",
@@ -122,7 +122,7 @@ export const Diverse: React.FC<JoinUsProps> = async ({ lng }) => {
       </div>
       <div
         style={{
-          height: "12rem",
+          height: "8rem",
           outline: "var(--divider-weight) solid var(--divider-color)",
           padding: "0 12rem",
           width: "100%",
