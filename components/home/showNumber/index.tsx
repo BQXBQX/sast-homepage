@@ -47,7 +47,7 @@ export const ShowNumber: React.FC<ShowNumberProps> = async ({ lng }) => {
       <div
         style={{
           width: "100%",
-          height: "12rem",
+          height: "8rem",
           borderTop: "var(--divider-weight) solid var(--divider-color)",
           borderBottom: "var(--divider-weight) solid var(--divider-color)",
           padding: "0 12rem",
