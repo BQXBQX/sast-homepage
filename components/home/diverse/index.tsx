@@ -177,7 +177,7 @@ export const Diverse: React.FC<JoinUsProps> = async ({ lng }) => {
       </div>
       <div
         style={{
-          height: "3rem",
+          height: "8rem",
           outline: "var(--divider-weight) solid var(--divider-color)",
           padding: "0 12rem",
           width: "100%",
