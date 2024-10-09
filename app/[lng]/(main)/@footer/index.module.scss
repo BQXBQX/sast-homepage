@@ -1,13 +1,16 @@
 .footerWrap {
+  --divider-color: #444444;
   width: 100%;
-  color: var(--black-color);
+  color: var(--white-color);
   font-size: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 3rem;
-  margin-bottom: 3rem;
+  padding-bottom: 3rem;
+  border-right: var(--divider-weight) solid var(--divider-color);
+  border-left: var(--divider-weight) solid var(--divider-color);
   .divide {
     height: var(--divider-weight);
     background-color: var(--divider-color);

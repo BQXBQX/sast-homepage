@@ -61,19 +61,24 @@
 }
 
 .bottom {
+  position: relative;
+  background-size: 6rem 6rem;
+  background-image: url("../../../public/img/background.png");
+  background-repeat: repeat;
   height: 100%;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
-  width: 100%;
-  padding: 0 12rem;
-  // outline: var(--divider-weight) solid var(--divider-color);
-
+  align-items: center;
+  width: calc(100% - 24rem);
+  height: 48rem;
+  justify-content: center;
+  border-left: var(--divider-weight) solid var(--divider-color);
+  border-right: var(--divider-weight) solid var(--divider-color);
   h2 {
     font-size: 3rem;
     width: 100%;
-    text-align: end;
+    text-align: center;
     padding-top: 3rem;
     padding-right: 3rem;
   }

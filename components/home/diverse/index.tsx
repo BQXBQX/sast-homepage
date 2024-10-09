@@ -155,7 +155,7 @@ export const Diverse: React.FC<JoinUsProps> = async ({ lng }) => {
           }}
           className={JetBrainsMono.className}
         >
-          04
+          05
         </span>
         <h2 className={NotoSansSCBold.className}>{t("calling")}</h2>
         <div
@@ -174,6 +174,23 @@ export const Diverse: React.FC<JoinUsProps> = async ({ lng }) => {
             <ArrowRight className={styles.svg} />
           </Button>
         </div>
+      </div>
+      <div
+        style={{
+          height: "3rem",
+          outline: "var(--divider-weight) solid var(--divider-color)",
+          padding: "0 12rem",
+          width: "100%",
+        }}
+      >
+        <div
+          style={{
+            height: "100%",
+            width: "100%",
+            borderRight: "var(--divider-weight) solid var(--divider-color)",
+            borderLeft: "var(--divider-weight) solid var(--divider-color)",
+          }}
+        ></div>
       </div>
     </>
   );
