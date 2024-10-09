@@ -40,7 +40,7 @@ export const CarouselCard: React.FC<CarouselCardProps> = ({
           style={{ bottom: svgBottomPosition, right: svgRightPosition }}
         ></UnoptimizedImage>
       )}
-      <p className={styles.desc} style={{ color: color }}>
+      <div className={styles.desc} style={{ color: color }}>
         <h1
           className={`${NotoSansSCBold.className} ${styles.title}`}
           style={{ color: color }}
@@ -48,7 +48,7 @@ export const CarouselCard: React.FC<CarouselCardProps> = ({
           {title}
         </h1>
         {desc}
-      </p>
+      </div>
     </div>
   );
 };

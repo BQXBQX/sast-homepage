@@ -3,7 +3,7 @@ import {
   Carousel,
   HeroImage,
   Introduction,
-  JoinUs,
+  Diverse,
   // Projects,
   ShowNumber,
   Welcome,
@@ -20,7 +20,7 @@ export default function Content({ lng }: ContentProps) {
       <Introduction lng={lng} />
       <ShowNumber lng={lng} />
       <Carousel lng={lng} />
-      <JoinUs lng={lng}></JoinUs>
+      <Diverse lng={lng}></Diverse>
     </>
   );
 }
