@@ -4,6 +4,7 @@ import { UnoptimizedImage } from "../unoptimizedImage";
 import styles from "./index.module.scss";
 
 interface OrbitingCirclesProps {
+  // eslint-disable-next-line no-unused-vars
   onHover: (value: string) => void;
 }
 export const OrbitingCircles = (props: OrbitingCirclesProps) => {

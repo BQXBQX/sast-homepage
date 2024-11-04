@@ -16,7 +16,9 @@ interface HeaderLinkProps {
 }
 
 export const HeaderLink: React.FC<HeaderLinkProps> = ({
+  // eslint-disable-next-line no-unused-vars
   openSheet,
+  // eslint-disable-next-line no-unused-vars
   closeSheet,
 }) => {
   const params = useParams();
