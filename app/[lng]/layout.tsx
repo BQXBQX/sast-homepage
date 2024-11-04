@@ -17,15 +17,16 @@ export async function generateStaticParams() {
     lng,
   }));
 }
-export default function RootLayout({
+export default async function RootLayout({
   children,
   params,
 }: Readonly<{
   children: React.ReactNode;
   params: Lang;
 }>) {
+  const { lng } = await params;
   return (
-    <html lang={params.lng} dir={params.lng}>
+    <html lang={lng} dir={lng}>
       <body>{children}</body>
     </html>
   );

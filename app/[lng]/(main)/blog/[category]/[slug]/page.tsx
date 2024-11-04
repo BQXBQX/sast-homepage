@@ -12,15 +12,16 @@ export async function generateStaticParams() {
 }
 
 type Params = {
-  params: {
+  params: Promise<{
     category: string;
     slug: string;
-  };
+  }>;
 };
 
 export default async function Content({ params }: Params) {
+  const { category, slug: contentSlug } = await params;
   const posts = await getAllPostSlugs();
-  const slug = `${params.category}/${params.slug}.${posts.extMap.get(`${params.category}/${params.slug}`)}`;
+  const slug = `${category}/${contentSlug}.${posts.extMap.get(`${category}/${contentSlug}`)}`;
   const post = await getPostBySlug(slug);
 
   return (
