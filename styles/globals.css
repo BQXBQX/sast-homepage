@@ -1,5 +1,6 @@
 :root {
   --max-width: 2200px;
+  --mobile-width: 920px;
   --border-radius: 12px;
   --font-mono: "JetBrains Mono", ui-monospace, Menlo, Monaco, "Cascadia Mono",
     "Segoe UI Mono", "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace",
@@ -147,9 +148,13 @@ body {
     font-size: 12px;
   }
 
-  @media screen and (max-width: 1150px) and (min-width: 920px) {
+  @media screen and (max-width: 1150px) and (min-width: 1024px) {
     font-size: 8px;
     /* --divider-weight: 1px; */
+  }
+
+  @media screen and (max-width: 1024px) {
+    font-size: 8px;
   }
 }
 

@@ -15,12 +15,12 @@ export const Welcome: React.FC<WelcomeProps> = async ({ lng }) => {
   const { t } = await useTranslation(lng, "welcome");
 
   return (
-    <div style={{ width: "100%", height: "fit-content", padding: "0 12rem" }}>
+    <div className={styles["welcome-container"]}>
       <div className={styles["welcome-wrapper"]}>
         <div className={styles["span-wrapper"]}>
-          <h1 className={`${styles.title}`}>
-            {t("title")}{" "}
-            <span className={styles["look"]}>
+          <div className={`${styles.title}`}>
+            <div>{t("title")} </div>
+            <div className={styles["look"]}>
               {t("look")}
               <div
                 style={{
@@ -77,13 +77,15 @@ export const Welcome: React.FC<WelcomeProps> = async ({ lng }) => {
                   width: "3rem",
                 }}
               />
-            </span>
-          </h1>
+            </div>
+          </div>
           <h2 className={`${styles.desc}`}>Igniting the thought.</h2>
-          <Button className={styles.button}>
-            <span>{t("button")}</span>
-            <ArrowRight className={styles.svg} />
-          </Button>
+          <div style={{ boxSizing: "border-box" }}>
+            <Button className={styles.button}>
+              <span>{t("button")}</span>
+              <ArrowRight className={styles.svg} />
+            </Button>
+          </div>
         </div>
         <div className={styles.divider}></div>
         <div className={styles["img-wrapper"]}>
