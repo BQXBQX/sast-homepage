@@ -44,15 +44,7 @@ export const ShowNumber: React.FC<ShowNumberProps> = async ({ lng }) => {
 
   return (
     <div style={{ width: "100%", height: "fit-content" }}>
-      <div
-        style={{
-          width: "100%",
-          height: "8rem",
-          borderTop: "var(--divider-weight) solid var(--divider-color)",
-          borderBottom: "var(--divider-weight) solid var(--divider-color)",
-          padding: "0 12rem",
-        }}
-      >
+      <div className={styles["up-space"]}>
         <div
           style={{
             width: "100%",
@@ -62,23 +54,10 @@ export const ShowNumber: React.FC<ShowNumberProps> = async ({ lng }) => {
           }}
         ></div>
       </div>
-      <div style={{ padding: "0 12rem" }}>
+      <div className={styles["show-number-container"]}>
         <div className={styles["show-number-wrapper"]}>
           <span
-            style={{
-              position: "absolute",
-              left: "0",
-              top: "0",
-              height: "3rem",
-              width: "3rem",
-              fontSize: "2rem",
-              transform: "translate(-100%, 0)",
-              border: "var(--divider-weight) solid var(--divider-color)",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-            }}
-            className={JetBrainsMono.className}
+            className={`${JetBrainsMono.className} ${styles["index-number"]}`}
           >
             02
           </span>
