@@ -14,16 +14,9 @@ export const Introduction: React.FC<IntroductionProps> = async ({ lng }) => {
       <div className={styles["up-space"]}>
         <div></div>
       </div>
-      <div
-        style={{
-          padding: "0 12rem",
-          backgroundColor: "black",
-          background:
-            "linear-gradient(145deg, #0d0d0d, #1a1a1a 40%, #262626, #0a0a0a)",
-        }}
-      >
+      <div className={styles["introduction-container"]}>
         <div className={styles["introduction-wrapper"]}>
-          <h2 className={styles["left-span"]}>
+          <div className={styles["left-span"]}>
             {t("title")}
             <Smile
               style={{
@@ -37,24 +30,11 @@ export const Introduction: React.FC<IntroductionProps> = async ({ lng }) => {
               color="#EEAC4C"
             />
             <span
-              style={{
-                position: "absolute",
-                left: "0",
-                top: "0",
-                height: "3rem",
-                width: "3rem",
-                fontSize: "2rem",
-                transform: "translate(-100%, 0)",
-                border: "var(--divider-weight) solid var(--divider-color)",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-              }}
-              className={JetBrainsMono.className}
+              className={`${JetBrainsMono.className} ${styles["index-number"]}`}
             >
               01
             </span>
-          </h2>
+          </div>
           <div className={styles.right}>
             <h1>{t("desc")}</h1>
             <p>{t("content")}</p>
