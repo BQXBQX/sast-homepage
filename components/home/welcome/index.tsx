@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 import { Button } from "@/components/button";
 import { UnoptimizedImage } from "@/components/unoptimizedImage";
@@ -82,7 +83,8 @@ export const Welcome: React.FC<WelcomeProps> = async ({ lng }) => {
           <h2 className={`${styles.desc}`}>Igniting the thought.</h2>
           <div style={{ boxSizing: "border-box" }}>
             <Button className={styles.button}>
-              <span>{t("button")}</span>
+              <Link href="https://njupt-sast.feishu.cn/wiki/TbcJwtET4iCBweks34ycGSyonze?view=vewX5jpH4H"
+        target="_blank" rel="noopener noreferrer">{t("button")}</Link>
               <ArrowRight className={styles.svg} />
             </Button>
           </div>

@@ -37,12 +37,14 @@ export const HeaderLink: React.FC<HeaderLinkProps> = ({
       >
         {t("home")}
       </Link>
-      <span
+      <Link
         className={`${NotoSansSC.className} ${styles["header-link-item"]} `}
         // onMouseEnter={() => openSheet()}
-      >
+        href="https://njupt-sast.feishu.cn/wiki/TbcJwtET4iCBweks34ycGSyonze?from=tab_home&view=vewX5jpH4H#share-GAWxdmnBboAG71xSe29cSd5cnYb"
+        target="_blank" rel="noopener noreferrer"
+        >
         {t("departmentIntroduction")}
-      </span>
+      </Link>
       <Link
         className={`${NotoSansSC.className} ${styles["header-link-item"]}`}
         // onMouseEnter={otherLinkHoverHandle}
@@ -50,12 +52,14 @@ export const HeaderLink: React.FC<HeaderLinkProps> = ({
       >
         {t("eventBlog")}
       </Link>
-      <span
+      <Link
         className={`${NotoSansSC.className} ${styles["header-link-item"]}`}
         // onMouseEnter={otherLinkHoverHandle}
+        href="https://njupt-sast.feishu.cn/wiki/TbcJwtET4iCBweks34ycGSyonze?from=tab_home&view=vewX5jpH4H#share-GAWxdmnBboAG71xSe29cSd5cnYb"
+        target="_blank" rel="noopener noreferrer"
       >
         {t("joinUs")}
-      </span>
+      </Link>
       {/* <Link
         className={`${NotoSansSC.className} ${styles["header-link-item"]}`}
         onMouseEnter={otherLinkHoverHandle}
