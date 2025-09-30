@@ -169,10 +169,16 @@ export const Diverse: React.FC<JoinUsProps> = async ({ lng }) => {
           <span className={sacramento.className} style={{ fontSize: "2rem" }}>
             Saster Igniting the thought.
           </span>
+          <a
+            href="https://njupt-sast.feishu.cn/wiki/TbcJwtET4iCBweks34ycGSyonze?from=tab_home&view=vewX5jpH4H#share-GAWxdmnBboAG71xSe29cSd5cnYb"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
           <Button className={styles.button}>
             {t("joinus")}
             <ArrowRight className={styles.svg} />
           </Button>
+          </a>
         </div>
       </div>
       <div
