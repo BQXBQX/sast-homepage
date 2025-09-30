@@ -30,10 +30,18 @@ export const Segment = () => {
   const { t } = useTranslation(params.lng as unknown as string, "header");
 
   const segmentsContent = [
-    { key: "home", value: t("home") },
-    { key: "department", value: t("departmentIntroduction") },
-    { key: "blog", value: t("eventBlog") },
-    { key: "join", value: t("joinUs") },
+    { key: "home", value: t("home"), link: "/" },
+    {
+      key: "department",
+      value: t("departmentIntroduction"),
+      link: "https://njupt-sast.feishu.cn/wiki/TbcJwtET4iCBweks34ycGSyonze?from=tab_home&view=vewX5jpH4H#share-GAWxdmnBboAG71xSe29cSd5cnYb",
+    },
+    // { key: "blog", value: t("eventBlog") },
+    {
+      key: "join",
+      value: t("joinUs"),
+      link: "https://njupt-sast.feishu.cn/wiki/TbcJwtET4iCBweks34ycGSyonze?from=tab_home&view=vewX5jpH4H#share-GAWxdmnBboAG71xSe29cSd5cnYb",
+    },
   ];
 
   const updateWindowPosition = useCallback((key: string) => {
@@ -78,9 +86,10 @@ export const Segment = () => {
           id={segmentContent.key}
           onMouseEnter={() => setHoverItem(segmentContent.key)} // Temporarily move on hover
           onClick={() =>
-            router.push(
-              `/${params.lng}/${segmentContent.key !== "home" ? segmentContent.key : ""}`,
-            )
+            // router.push(
+            //   `/${params.lng}/${segmentContent.key !== "home" ? segmentContent.key : ""}`,
+            // )
+            window.open(segmentContent.link, "_blank")
           }
         >
           {segmentContent.value}

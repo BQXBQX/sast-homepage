@@ -45,13 +45,13 @@ export const HeaderLink: React.FC<HeaderLinkProps> = ({
         >
         {t("departmentIntroduction")}
       </Link>
-      <Link
+      {/* <Link
         className={`${NotoSansSC.className} ${styles["header-link-item"]}`}
         // onMouseEnter={otherLinkHoverHandle}
         href={`/${params.lng}/blog`}
       >
         {t("eventBlog")}
-      </Link>
+      </Link> */}
       <Link
         className={`${NotoSansSC.className} ${styles["header-link-item"]}`}
         // onMouseEnter={otherLinkHoverHandle}
