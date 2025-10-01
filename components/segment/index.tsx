@@ -2,7 +2,7 @@
 import React from "react";
 import { useTranslation } from "@/lib/i18n/client";
 import styles from "./index.module.scss";
-import { useParams, usePathname, useRouter } from "next/navigation";
+import { useParams, usePathname } from "next/navigation";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { motion } from "framer-motion";
 
@@ -25,7 +25,6 @@ export const Segment = () => {
     () => pathname.split("/")[2] ?? "home",
     [pathname],
   );
-  const router = useRouter();
 
   const { t } = useTranslation(params.lng as unknown as string, "header");
 
