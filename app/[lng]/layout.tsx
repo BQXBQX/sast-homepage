@@ -2,6 +2,7 @@ import React from "react";
 import type { Metadata } from "next";
 import "@/styles/globals.css";
 import { languages } from "@/lib/i18n/setting";
+import { ThemeProvider } from "next-themes";
 
 type Lang = {
   lng: string;
@@ -17,6 +18,7 @@ export async function generateStaticParams() {
     lng,
   }));
 }
+
 export default async function RootLayout({
   children,
   params,
@@ -26,8 +28,12 @@ export default async function RootLayout({
 }>) {
   const { lng } = await params;
   return (
-    <html lang={lng} dir={lng}>
-      <body>{children}</body>
+    <html lang={lng} dir={lng} suppressHydrationWarning>
+      <body>
+        <ThemeProvider defaultTheme="light">
+          {children}
+        </ThemeProvider>
+      </body>
     </html>
   );
 }

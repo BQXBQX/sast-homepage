@@ -1,12 +1,14 @@
 "use client";
+
 import React, { useCallback, useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import sastPic from "@/public/img/sast_logo_black.png";
 import { UnoptimizedImage, HeaderLink, HeaderSheet } from "@/components";
 import styles from "./page.module.scss";
-import { Languages } from "lucide-react";
+import { Languages, Moon, Sun } from "lucide-react";
 import { useParams, useRouter } from "next/navigation";
 import { Segment } from "@/components/segment";
+import { useTheme } from "next-themes";
 
 const Header = () => {
   const [visible, setVisible] = useState<boolean>();
@@ -14,6 +16,7 @@ const Header = () => {
   const headerRef = useRef<HTMLDivElement>(null); // Reference to the header
   const params = useParams();
   const router = useRouter();
+  const { theme, setTheme } = useTheme();
 
   const headerSheetBackAnimation = {
     hidden: {
@@ -33,6 +36,10 @@ const Header = () => {
       router.push("/en");
     }
   }, [params.lng, router]);
+
+  const handleThemeSwitch = useCallback(() => {
+    setTheme(theme === "light" ? "dark" : "light");
+  }, [theme, setTheme]);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -111,6 +118,20 @@ const Header = () => {
               onClick={handleChangeLanguage}
             >
               <Languages style={{ height: "100%", width: "1.3rem" }} />
+            </div>
+            <div
+              style={{
+                cursor: "pointer",
+                height: "1.6rem",
+                alignItems: "center",
+              }}
+              onClick={handleThemeSwitch}
+            >
+              {
+                theme === "light"
+                ? <Sun style={{ height: "100%", width: "1.3rem" }} />
+                : <Moon style={{ height: "100%", width: "1.3rem" }} />
+              }
             </div>
           </div>
         </div>
