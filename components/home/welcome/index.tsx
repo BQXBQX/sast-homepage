@@ -89,7 +89,6 @@ export const Welcome: React.FC<WelcomeProps> = async ({ lng }) => {
             </Button>
           </div>
         </div>
-        <div className={styles.divider}></div>
         <div className={styles["img-wrapper"]}>
           <UnoptimizedImage
             src={BulbPic}

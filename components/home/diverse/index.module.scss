@@ -62,9 +62,6 @@
 
 .bottom {
   position: relative;
-  background-size: 6rem 6rem;
-  background-image: url("../../../public/img/background.png");
-  background-repeat: repeat;
   height: 100%;
   box-sizing: border-box;
   display: flex;
@@ -75,6 +72,19 @@
   justify-content: center;
   border-left: var(--divider-weight) solid var(--divider-color);
   border-right: var(--divider-weight) solid var(--divider-color);
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: 6rem 6rem;
+    background-image: url("../../../public/img/background.png");
+    background-repeat: repeat;
+  }
+
   h2 {
     font-size: 3rem;
     width: 100%;
@@ -94,5 +104,11 @@
     .svg {
       height: 1.2rem;
     }
+  }
+}
+
+[data-theme="dark"] {
+  .bottom::before {
+    opacity: var(--grid-background-opacity);
   }
 }
