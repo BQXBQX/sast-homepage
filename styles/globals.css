@@ -44,7 +44,7 @@
 }
 
 [data-theme="dark"] {
-  --foreground-rgb: 230, 230, 230;
+  --foreground-rgb: 255, 255, 255;
   --background-start-rgb: 0, 0, 0;
   --background-end-rgb: 0, 0, 0;
 
@@ -75,8 +75,8 @@
 
   /* my css variables */
   --divider-color: #3b3b3b;
-  --grid-background-opacity: .4;
-  --nav-window-color: #a58114;
+  --grid-background-opacity: .3;
+  --nav-window-color: #eeac4c;
 }
 
 @font-face {
