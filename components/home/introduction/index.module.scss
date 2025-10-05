@@ -1,6 +1,5 @@
 .introduction-container {
   padding: 0 12rem;
-  background-color: black;
   background: linear-gradient(145deg, #0d0d0d, #1a1a1a 40%, #262626, #0a0a0a);
   @media screen and (max-width: 1024px) {
     padding: 0;
@@ -81,5 +80,11 @@
     height: 100%;
     border-left: var(--divider-weight) solid var(--divider-color);
     border-right: var(--divider-weight) solid var(--divider-color);
+  }
+}
+
+[data-theme="dark"] {
+  .introduction-container {
+    
   }
 }

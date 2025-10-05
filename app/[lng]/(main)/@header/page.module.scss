@@ -7,7 +7,7 @@
   display: flex;
   flex-direction: column;
   z-index: 1000;
-  color: var(--black-color);
+  color: rgb(var(--foreground-rgb));
   top: 0;
   border-bottom: var(--divider-weight) solid var(--divider-color);
   .header-content {
